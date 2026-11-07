@@ -1,0 +1,359 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f0f4f7"><title>Volley Coach Mini — Rotations 5–1</title><style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#172f43;background:#f0f4f7;--navy:#173145;--blue:#147c88;--sub:#64798c;--line:#e1e8ed}*{box-sizing:border-box}body{margin:0}.app{max-width:1240px;margin:auto;padding:15px 18px 18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.brand{display:flex;align-items:center;gap:10px}.logo{background:#0a7782;color:#fff;width:35px;height:35px;border-radius:11px;display:grid;place-items:center;font-size:19px}.brand h1{font-size:19px;line-height:1.1;letter-spacing:-.04em;margin:0}.brand p{font-size:11px;color:var(--sub);margin:3px 0 0}.topBadge{font-size:11px;font-weight:800;color:#166b6c;background:#dff4f0;padding:8px 11px;border-radius:999px}.workspace{display:grid;grid-template-columns:226px minmax(0,1fr) 258px;gap:12px;align-items:stretch}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 5px 15px #1a3d4c08;min-width:0}.sidebar,.aside{display:flex;flex-direction:column;gap:14px}.block{min-width:0}.label{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:900;color:#75899b;margin:0 0 9px}.card h2{margin:0;color:#172f43;font-size:15px;letter-spacing:-.02em}.small{color:#65788b;font-size:11px;line-height:1.45;margin:7px 0}.segment{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.segment button,.phase button{border:1px solid #e4ebf0;background:#f7f9fb;color:#4d667a;cursor:pointer;font-weight:800;border-radius:9px;padding:10px 5px;font-size:12px}.segment button.active,.phase button.active{background:#087b85;border-color:#087b85;color:#fff}.phase{display:grid;grid-template-columns:1fr;gap:6px}.phase button{display:flex;text-align:left;align-items:center;justify-content:space-between;gap:8px;padding:10px 11px}.phase button::after{content:'›';opacity:.45;font-size:18px;font-weight:400;line-height:8px}.phase button.active::after{opacity:1}.divider{border:0;border-top:1px solid var(--line);margin:0}.editor{display:grid;grid-template-columns:1fr;gap:5px}.field{display:flex;align-items:center;justify-content:space-between;gap:8px}.field label{min-width:43px;font-size:11px;font-weight:900;color:#4c6579}.field input{min-width:0;width:100%;padding:7px 8px;border:1px solid #e2eaf0;border-radius:7px;font-size:11px;color:#263e52;background:#fafcfd}.main{display:flex;flex-direction:column;gap:0}.courtTop{display:flex;align-items:center;justify-content:space-between;gap:8px}.sub{font-size:11px;color:var(--sub);margin-top:3px}.pill{background:#e6f4f1;color:#137368;border-radius:999px;font-size:10px;padding:7px 10px;font-weight:900;white-space:nowrap}.courtStage{width:min(100%,465px);margin:12px auto 0;padding:0 5px 34px}.court{position:relative;width:100%;aspect-ratio:1.28/1;background:linear-gradient(180deg,#f1d1a7,#e8b67d);border:4px solid #d9a46e;box-shadow:inset 0 0 0 2px #fff;border-radius:8px;overflow:visible;touch-action:none}.court .midline{position:absolute;left:0;right:0;top:0;border-top:4px solid #fff}.court .three{position:absolute;left:0;right:0;top:38%;border-top:2px solid #fff9}.court .labelTop{position:absolute;top:-19px;left:0;right:0;text-align:center;color:#7890a0;font-size:9px;font-weight:900;letter-spacing:.12em}.court .labelBot{position:absolute;bottom:2%;left:0;right:0;text-align:center;color:#ac7851;font-weight:800;letter-spacing:.12em;font-size:9px;opacity:.55}.player{position:absolute;z-index:2;width:62px;height:51px;transform:translate(-50%,-50%);background:white;border:2px solid var(--role);border-radius:10px;box-shadow:0 3px 9px #6d513b33;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;cursor:grab;user-select:none;transition:left .5s cubic-bezier(.2,.85,.2,1),top .5s cubic-bezier(.2,.85,.2,1)}.player.drag{transition:none;z-index:10;cursor:grabbing;box-shadow:0 7px 15px #48372455}.player .abbr{color:var(--role);font-size:16px;font-weight:950;line-height:1}.player .name{font-size:8px;font-weight:700;text-align:center;color:#526a7b;max-width:58px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.player .roleline{display:none}.player.outside .abbr::after{content:' •';font-size:8px;color:#087b85}.legend{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:2px 0 8px}.chip{font-size:10px;color:#52677a;background:#f4f7f9;padding:5px 7px;border-radius:7px;display:flex;gap:5px;align-items:center}.chip strong{color:#233e52}.dot{background:var(--c);height:7px;width:7px;border-radius:50%}.hint{text-align:center;font-size:11px;color:#7a8b9b;padding:7px 0 0;margin-top:auto}.score{display:grid;grid-template-columns:1fr 20px 1fr;align-items:center;background:#f5f8fa;padding:11px 8px;border-radius:12px;margin:9px 0 8px}.scoreLabel{font-size:10px;text-transform:uppercase;color:#718598;font-weight:800;text-align:center}.scoreNum{text-align:center;font-size:38px;font-weight:900;line-height:1.15;letter-spacing:-.06em}.dash{color:#9bb0bb;font-size:21px;text-align:center}.status{padding:10px;background:#e8f6f2;border-radius:9px;color:#146e65;font-weight:800;font-size:11px;line-height:1.5}.controls{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.btn{cursor:pointer;border:0;border-radius:9px;padding:11px 8px;font-size:11px;font-weight:900;transition:filter .13s}.btn:hover{filter:brightness(.96)}.btn.green{background:#118665;color:#fff}.btn.red{background:#ca5554;color:#fff}.btn.blue{background:#147d89;color:white}.btn.light{background:#edf3f6;color:#3c5b70}.btn.full{grid-column:1/-1;padding:7px 6px;background:#f1f5f8;color:#486275}.quick{display:grid;grid-template-columns:1fr 1fr;gap:6px}.quick .btn{padding:9px 6px}.micro{font-size:10px;line-height:1.45;color:#778999;margin:0}.footer{font-size:10px;line-height:1.5;color:#7890a0;margin-top:11px}.mobileBar{display:none}
+@media(max-width:980px){.workspace{grid-template-columns:190px minmax(0,1fr) 220px;gap:9px}.app{padding:12px}.card{padding:12px}.courtStage{width:min(100%,425px)}.player{width:56px;height:49px}.player .abbr{font-size:14px}}
+@media(max-width:760px){.workspace{grid-template-columns:1fr 1fr}.main{grid-column:1/-1;grid-row:1}.sidebar{grid-column:1}.aside{grid-column:2}.courtStage{width:min(100%,390px)}.phase{grid-template-columns:repeat(2,minmax(0,1fr))}.editor{grid-template-columns:1fr 1fr}.topBadge{display:none}}
+@media(max-width:480px){.app{padding:10px}.workspace{grid-template-columns:1fr;gap:9px}.main,.sidebar,.aside{grid-column:auto;grid-row:auto}.main{grid-row:1}.aside{grid-row:2}.sidebar{grid-row:3}.card{padding:12px}.courtStage{width:min(100%,350px);padding-bottom:32px}.player{width:48px;height:43px;border-radius:8px}.player .abbr{font-size:13px}.player .name{font-size:7px;max-width:45px}.phase{grid-template-columns:1fr 1fr}.scoreNum{font-size:32px}.sidebar .phase{grid-template-columns:1fr 1fr}.editor{grid-template-columns:1fr 1fr}.small{font-size:11px}}
+
+/* Version mini : densité renforcée, toutes les commandes restent utilisables. */
+@media(min-width:761px){
+.app{max-width:1000px;padding:8px 10px 10px}
+.top{margin-bottom:6px;gap:8px}.brand{gap:7px}.brand h1{font-size:15px}.brand p{font-size:9px;margin-top:1px}.logo{width:27px;height:27px;border-radius:8px;font-size:15px}.topBadge{font-size:9px;padding:5px 8px}
+.workspace{grid-template-columns:174px minmax(0,1fr) 198px;gap:7px;align-items:start}
+.card{padding:9px;border-radius:11px;box-shadow:0 2px 9px #1a3d4c08}
+.sidebar,.aside{gap:8px}.label{font-size:9px;margin-bottom:5px;letter-spacing:.06em}
+.segment{gap:4px}.segment button,.phase button{font-size:10px;border-radius:6px;padding:6px 3px}
+.phase{gap:4px}.phase button{padding:6px 7px;gap:3px}.phase button::after{font-size:13px}
+.field{gap:4px}.field label{min-width:30px;font-size:9px}.field input{padding:4px 5px;border-radius:5px;font-size:10px}.editor{gap:4px}
+.small{font-size:9px;margin:4px 0;line-height:1.3}.micro,.footer{font-size:9px;line-height:1.35}
+.card h2{font-size:12px}.sub{font-size:9px;margin-top:2px}.pill{font-size:9px;padding:4px 7px}
+.courtStage{width:min(100%,310px);margin:13px auto 0;padding:0 5px 25px}.court{border-width:3px;border-radius:6px}.court .labelTop{top:-14px;font-size:8px}.court .labelBot{font-size:7px}
+.player{width:46px;height:37px;border-radius:7px;border-width:1.5px}.player .abbr{font-size:12px}.player .name{font-size:7px;max-width:43px}
+.legend{gap:3px;margin:1px 0 5px}.chip{font-size:8px;padding:3px 5px;border-radius:5px;gap:3px}.dot{width:5px;height:5px}.hint{font-size:9px;padding-top:3px}
+.score{padding:7px 5px;margin:4px 0 5px;border-radius:8px}.scoreLabel{font-size:9px}.scoreNum{font-size:27px}.dash{font-size:16px}.status{font-size:9px;padding:6px;border-radius:6px;line-height:1.35}
+.controls{gap:4px;margin-top:6px}.btn{font-size:9px;padding:7px 4px;border-radius:6px}.quick{gap:4px}.quick .btn{padding:6px 4px}
+.footer{margin-top:6px}
+}
+@media(max-width:760px){.app{padding:8px}.top{margin-bottom:7px}.card{padding:9px;border-radius:10px}.sidebar,.aside{gap:9px}.label{margin-bottom:6px}.phase button,.segment button{padding:7px 5px;font-size:10px}.courtStage{width:min(100%,315px);padding-bottom:28px}.player{width:46px;height:39px}.player .abbr{font-size:12px}.player .name{font-size:7px}.scoreNum{font-size:28px}.btn{padding:8px 5px;font-size:10px}.quick .btn{padding:7px 5px}.hint{font-size:10px}.legend{margin-bottom:3px}.chip{font-size:9px;padding:4px 5px}}
+
+/* Ergonomie téléphone / tablette */
+button,summary{-webkit-tap-highlight-color:transparent}
+.player{touch-action:none;-webkit-user-select:none;user-select:none}
+button{touch-action:manipulation}
+.playersDetails{min-width:0}.playersDetails summary{cursor:pointer;list-style:none}.playersDetails summary::-webkit-details-marker{display:none}.playersDetails summary::after{content:' ▾';color:#0b7e86}.playersDetails[open] summary::after{content:' ▴'}.playersDetails .editor{margin-top:8px}
+@media(max-width:760px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden}
+ .app{width:100%;max-width:540px;padding:10px 10px 24px}
+ .workspace{display:flex;flex-direction:column;gap:10px}
+ .sidebar{order:0}.main{order:1}.aside{order:2}
+ .top{margin:0 0 10px}.brand h1{font-size:18px}.brand p{font-size:10px}.logo{width:35px;height:35px}
+ .card{width:100%;padding:12px;border-radius:14px}
+ .sidebar{gap:9px}.sidebar .divider{display:none}
+ .sidebar .label{font-size:11px;margin-bottom:6px}
+ .sidebar .segment{grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}
+ .sidebar .segment button{min-width:0;min-height:43px;font-size:12px;padding:8px 1px}
+ .sidebar .phase{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+ .sidebar .phase button{display:flex;justify-content:center;text-align:center;min-width:0;min-height:43px;font-size:11px;padding:7px 2px}
+ .sidebar .phase button::after{display:none}
+ .playersDetails{margin-top:1px}.playersDetails .editor{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .field{gap:5px}.field label{min-width:32px}.field input{font-size:16px;min-height:40px}
+ .courtTop h2{font-size:17px}.courtTop .sub{font-size:12px}.pill{font-size:11px;padding:7px 10px}
+ .courtStage{width:min(100%,380px);margin:22px auto 0;padding:0 7px 38px}
+ .court{aspect-ratio:1.23/1;border-width:3px}
+ .player{width:clamp(43px,13vw,55px);height:clamp(41px,12vw,49px);border-radius:9px}
+ .player .abbr{font-size:clamp(12px,3.8vw,16px)}.player .name{font-size:8px;max-width:50px}
+ .legend{margin:0 0 4px;gap:4px}.chip{font-size:9px}
+ .hint{font-size:11px;line-height:1.35}
+ .aside{gap:9px}.aside .divider{margin:2px 0}
+ .score{padding:7px;margin:6px 0}.scoreNum{font-size:30px}
+ .controls{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .controls .btn{min-height:48px;font-size:13px;border-radius:10px}
+ .controls .btn.full{min-height:42px}
+ .quick .btn{min-height:44px;font-size:12px}
+ .status{font-size:12px;padding:10px}
+ .footer{font-size:10px;line-height:1.45}
+}
+@media(max-width:365px){
+ .app{padding:7px}.card{padding:10px}
+ .sidebar .phase button{font-size:10px}
+ .courtStage{padding-left:8px;padding-right:8px}
+ .player{width:42px;height:39px}.player .name{font-size:7px}
+}
+</style></head><body><div class="app">
+<header class="top"><div class="brand"><div class="logo">🏐</div><div><h1>Volley Coach Mini</h1><p>Rotations 5–1 · règle FIVB 2025–2028</p></div></div><div class="topBadge">TABLEAU TACTIQUE</div></header>
+<div class="workspace">
+<aside class="card sidebar">
+<section class="block"><p class="label">01 / Rotation</p><div class="segment" id="rotationBtns"></div></section>
+<hr class="divider">
+<section class="block"><p class="label">02 / Phase de jeu</p><div class="phase" id="phaseBtns"></div></section>
+<hr class="divider">
+<details class="block playersDetails" id="playersDetails"><summary class="label">Joueurs · modifier les noms</summary><div class="editor" id="editor"></div></details>
+</aside>
+<main class="card main"><div class="courtTop"><div><h2>Placement sur le terrain</h2><div class="sub" id="subtitle">Rotation 1 · Home</div></div><span class="pill" id="serverInfo">Serveur : S</span></div>
+<div class="courtStage"><div class="court" id="court"><div class="labelTop">FILET</div><div class="three"></div><div class="midline"></div><div class="labelBot">LIGNE DE FOND ↓</div></div></div>
+<div class="legend" id="legend"></div><div class="hint" id="ruleHint">↔ Déplace un joueur pour personnaliser ce placement.</div></main>
+<aside class="card aside">
+<section class="block"><p class="label">Match en direct</p><div class="score"><div><div class="scoreLabel">Nous</div><div class="scoreNum" id="scoreUs">0</div></div><div class="dash">:</div><div><div class="scoreLabel">Adversaire</div><div class="scoreNum" id="scoreThem">0</div></div></div><div class="status" id="status">Service : notre équipe · rotation 1</div><div class="controls"><button class="btn green" id="won">✓ Point gagné</button><button class="btn red" id="lost">✕ Point perdu</button><button class="btn light full" id="undo">↶ Annuler le dernier point</button></div></section>
+
+<hr class="divider">
+<section class="block"><p class="label">Situation</p><div class="sub"><strong id="sumRotation">R1</strong> · <span id="sumPhase">Home</span> · Serveur <span id="sumServer">S</span></div><div class="small" id="phaseExplain"></div><div style="display:none" id="sumServe"></div></section>
+<hr class="divider">
+<section class="block"><p class="label">Outils</p><div class="quick"><button class="btn light" id="newMatch">Nouveau match</button><button class="btn light" id="resetPhase">Effacer phase</button><button class="btn light" id="resetAll">Effacer tout</button></div><p class="micro" style="margin-top:9px">Départ = ordre de rotation ; Défense = placement tactique après service. Les réglages sont sauvegardés.</p></section>
+</aside></div><div class="footer">Règle FIVB 2025–2028, art. 7.4 : au service, liberté de placement (sauf serveur hors terrain) ; en réception, respect de l’ordre de rotation. Les rôles avant/arrière et l’ordre des serveurs restent inchangés.</div></div>
+<script>
+(()=>{
+'use strict';
+const STORAGE_KEY='volley-coach-mobile-v8';
+const PREVIOUS_STORAGE_KEY='volley-coach-mini-simplifie-v7';
+const roles={
+  S:{abbr:'S', name:'Passeur', color:'#1f6fd0'},
+  RS:{abbr:'RS', name:'Pointu / Opposite', color:'#cb4f5f'},
+  OH1:{abbr:'OH1', name:'Allier 1', color:'#8456d3'},
+  OH2:{abbr:'OH2', name:'Allier 2', color:'#9564e6'},
+  MB1:{abbr:'MB1', name:'Central 1', color:'#d0872a'},
+  MB2:{abbr:'MB2', name:'Central 2', color:'#c97024'}
+};
+const phaseLabels={home:'Départ',serve:'Service',receivePrimary:'Réception',base:'Défense'};
+const phaseDescriptions={
+  home:'Positions de départ dans l’ordre de rotation réglementaire.',
+  serve:'Nouvelle règle FIVB : quand nous servons, les cinq joueurs de champ se placent directement dans leur organisation tactique de base ; le bon serveur reste derrière la ligne de fond.',
+  receivePrimary:'Placement en réception pour cette rotation, avant le service adverse.',
+  base:'Placement tactique défensif après le service et le replacement des joueurs.'
+};
+const serverByRotation={1:'S',2:'OH1',3:'MB1',4:'RS',5:'OH2',6:'MB2'};
+const baseFormations={
+  1:{
+    home:{RS:[0.14,0.16],MB1:[0.47,0.16],OH1:[0.80,0.16],OH2:[0.14,0.73],MB2:[0.47,0.73],S:[0.82,0.73]},
+    serve:{MB1:[0.48,0.12],RS:[0.30,0.24],OH1:[0.67,0.24],MB2:[0.48,0.56],OH2:[0.29,0.73],S:[0.88,1.05]},
+    receivePrimary:{RS:[0.15,0.25],MB1:[0.47,0.12],OH2:[0.16,0.70],MB2:[0.47,0.78],OH1:[0.80,0.63],S:[0.88,0.74]},
+    receiveAlternate:{MB1:[0.47,0.21],OH1:[0.78,0.10],S:[0.89,0.27],RS:[0.14,0.58],MB2:[0.81,0.59],OH2:[0.50,0.76]},
+    base:{OH1:[0.14,0.16],MB1:[0.47,0.16],RS:[0.82,0.16],MB2:[0.50,0.72],S:[0.82,0.72],OH2:[0.18,0.72]}
+  },
+  2:{
+    home:{OH2:[0.14,0.16],RS:[0.47,0.16],MB1:[0.80,0.16],MB2:[0.14,0.73],S:[0.47,0.73],OH1:[0.82,0.73]},
+    serve:{OH2:[0.16,0.16],MB1:[0.56,0.14],RS:[0.35,0.28],S:[0.88,0.46],MB2:[0.16,0.72],OH1:[0.86,1.05]},
+    receivePrimary:{RS:[0.47,0.14],MB1:[0.81,0.15],S:[0.71,0.27],OH2:[0.15,0.72],OH1:[0.79,0.68],MB2:[0.49,0.81]},
+    receiveAlternate:{OH2:[0.14,0.16],RS:[0.58,0.12],S:[0.32,0.26],MB2:[0.15,0.69],MB1:[0.81,0.68],OH1:[0.51,0.80]},
+    base:{OH2:[0.15,0.16],MB1:[0.48,0.16],RS:[0.82,0.16],MB2:[0.15,0.63],S:[0.82,0.63],OH1:[0.50,0.79]}
+  },
+  3:{
+    home:{MB2:[0.14,0.16],OH2:[0.47,0.16],RS:[0.80,0.16],S:[0.14,0.73],MB1:[0.47,0.73],OH1:[0.82,0.73]},
+    serve:{MB2:[0.24,0.12],RS:[0.77,0.12],OH2:[0.50,0.26],S:[0.35,0.54],OH1:[0.58,0.74],MB1:[0.50,1.05]},
+    receivePrimary:{MB2:[0.15,0.12],RS:[0.82,0.14],S:[0.12,0.50],OH2:[0.18,0.64],MB1:[0.76,0.63],OH1:[0.49,0.80]},
+    receiveAlternate:{MB2:[0.23,0.12],OH1:[0.78,0.12],S:[0.10,0.27],OH2:[0.18,0.68],RS:[0.77,0.61],MB1:[0.51,0.79]},
+    base:{OH2:[0.15,0.16],MB2:[0.47,0.16],RS:[0.82,0.16],MB1:[0.15,0.63],S:[0.82,0.63],OH1:[0.50,0.79]}
+  },
+  4:{
+    home:{RS:[0.14,0.16],MB2:[0.47,0.16],OH2:[0.80,0.16],OH1:[0.14,0.73],MB1:[0.47,0.73],S:[0.82,0.73]},
+    serve:{S:[0.23,0.18],MB2:[0.48,0.12],OH2:[0.76,0.16],MB1:[0.48,0.63],OH1:[0.26,0.79],RS:[0.50,1.05]},
+    receivePrimary:{S:[0.14,0.14],MB2:[0.47,0.26],OH2:[0.15,0.64],OH1:[0.79,0.63],MB1:[0.47,0.80],RS:[0.82,0.80]},
+    receiveAlternate:{MB2:[0.48,0.12],S:[0.22,0.26],OH2:[0.76,0.18],OH1:[0.15,0.64],MB1:[0.49,0.80],RS:[0.82,0.63]},
+    base:{OH2:[0.15,0.16],MB2:[0.48,0.16],S:[0.82,0.16],MB1:[0.15,0.63],OH1:[0.50,0.79],RS:[0.82,0.63]}
+  },
+  5:{
+    home:{OH1:[0.14,0.16],S:[0.47,0.16],MB2:[0.80,0.16],MB1:[0.14,0.73],RS:[0.47,0.73],OH2:[0.82,0.73]},
+    serve:{OH1:[0.16,0.16],MB2:[0.56,0.14],S:[0.31,0.26],MB1:[0.14,0.72],RS:[0.80,0.48],OH2:[0.50,1.05]},
+    receivePrimary:{S:[0.48,0.12],MB2:[0.81,0.20],OH2:[0.15,0.66],OH1:[0.80,0.64],MB1:[0.47,0.80],RS:[0.68,0.89]},
+    receiveAlternate:{OH1:[0.15,0.16],MB2:[0.48,0.16],S:[0.25,0.26],MB1:[0.14,0.64],OH2:[0.79,0.64],RS:[0.50,0.80]},
+    base:{OH1:[0.15,0.16],MB2:[0.48,0.16],S:[0.82,0.16],MB1:[0.15,0.63],OH2:[0.50,0.79],RS:[0.82,0.63]}
+  },
+  6:{
+    home:{MB1:[0.14,0.16],OH1:[0.47,0.16],S:[0.80,0.16],RS:[0.14,0.73],OH2:[0.47,0.73],MB2:[0.82,0.73]},
+    serve:{MB1:[0.47,0.12],S:[0.72,0.12],OH1:[0.60,0.24],RS:[0.19,0.49],OH2:[0.49,0.80],MB2:[0.50,1.05]},
+    receivePrimary:{MB1:[0.15,0.12],S:[0.80,0.12],OH1:[0.18,0.67],MB2:[0.81,0.64],RS:[0.15,0.88],OH2:[0.50,0.80]},
+    receiveAlternate:{MB1:[0.15,0.12],OH1:[0.42,0.24],S:[0.76,0.12],RS:[0.15,0.64],MB2:[0.81,0.64],OH2:[0.50,0.80]},
+    base:{OH2:[0.15,0.16],MB1:[0.48,0.16],S:[0.82,0.16],MB2:[0.15,0.63],OH1:[0.50,0.79],RS:[0.82,0.63]}
+  }
+};
+const state={rotation:1,phase:'home',serve:'us',scoreUs:0,scoreThem:0,history:[],custom:{},names:{}};
+try{
+  const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||localStorage.getItem(PREVIOUS_STORAGE_KEY));
+  if(saved){
+    Object.assign(state,saved);state.history=[];
+    // Apply the requested R1 correction even if previous custom coordinates exist.
+    for(const phase of ['serve','base']){
+      if(state.custom?.[1]?.[phase]){
+        delete state.custom[1][phase].OH2;
+        delete state.custom[1][phase].MB2;
+      }
+    }
+  }
+}catch(e){}
+if(state.phase==='receiveAlternate') state.phase='receivePrimary';
+// Une phase de réception signifie que le service appartient à l'adversaire.
+if(state.phase==='receivePrimary') state.serve='them';
+if(state.phase==='serve') state.serve='us';
+for(const key of Object.keys(roles)){if(!state.names[key]) state.names[key]=roles[key].name;}
+const court=document.getElementById('court');
+const $=id=>document.getElementById(id);
+function deepClone(obj){return JSON.parse(JSON.stringify(obj));}
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({...state,history:[]}));}catch(e){/* stockage indisponible */}}
+function arrangeServeFormation(rotation){
+  const formation=deepClone(baseFormations[rotation].base);
+  const server=serverByRotation[rotation];
+  formation[server]=[0.5,1.07];
+
+  const home=baseFormations[rotation].home;
+  const backRoles=Object.keys(home).filter(role=>home[role][1] > 0.5 && role!==server);
+  const middleInBack=backRoles.find(role=>role.startsWith('MB'));
+  if(middleInBack){
+    formation[middleInBack]=[0.5,0.72];
+    const others=backRoles.filter(role=>role!==middleInBack);
+    if(others[0]){
+      const defaultX=(baseFormations[rotation].base[others[0]]||home[others[0]])[0];
+      formation[others[0]]=[defaultX < 0.5 ? 0.18 : 0.82, 0.72];
+    }
+  }
+  // R1 au service : OH2 joue à gauche en zone arrière,
+  // et MB2 reste au centre de la zone arrière.
+  if(rotation===1){
+    formation.OH2=[0.18,0.72];
+    formation.MB2=[0.5,0.72];
+  }
+  return formation;
+}
+function getFormation(rotation,phase){
+  const base=phase==='serve' ? arrangeServeFormation(rotation) : deepClone(baseFormations[rotation][phase]);
+  const custom=state.custom?.[rotation]?.[phase];
+  if(custom){for(const role of Object.keys(custom)){base[role]=custom[role];}}
+  return base;
+}
+function ensureCustom(rotation,phase){
+  state.custom[rotation] ||= {};
+  state.custom[rotation][phase] ||= {};
+  return state.custom[rotation][phase];
+}
+function defaultPhase(){return state.serve==='us' ? 'serve' : 'receivePrimary';}
+function clamp(v,min,max){return Math.min(max,Math.max(min,v));}
+function serverRole(){return serverByRotation[state.rotation];}
+function phaseLabel(){return phaseLabels[state.phase];}
+function addHistory(){state.history.push({rotation:state.rotation,phase:state.phase,serve:state.serve,scoreUs:state.scoreUs,scoreThem:state.scoreThem});if(state.history.length>100)state.history.shift();}
+function setPhase(phase){
+  state.phase=phase;
+  // Le choix de la phase sert également à définir qui est au service.
+  // Sans cela, démarrer directement en R6 Réception pouvait laisser le service à nous.
+  if(phase==='receivePrimary') state.serve='them';
+  if(phase==='serve') state.serve='us';
+  render();
+}
+function setRotation(rot){state.rotation=rot;render();}
+function changePoint(won){
+  addHistory();
+  if(won){
+    state.scoreUs += 1;
+    if(state.serve==='them'){
+      state.rotation = state.rotation === 6 ? 1 : state.rotation + 1;
+      state.serve = 'us';
+    }
+  }else{
+    state.scoreThem += 1;
+    state.serve = 'them';
+  }
+  state.phase = defaultPhase();
+  render();
+}
+function resetMatch(){state.rotation=1;state.phase='home';state.serve='us';state.scoreUs=0;state.scoreThem=0;state.history=[];render();}
+function resetCurrentPhase(){
+  if(state.custom?.[state.rotation]?.[state.phase]) delete state.custom[state.rotation][state.phase];
+  render();
+}
+function resetPlacements(){state.custom={};render();}
+function createPlayer(role){
+  const info=roles[role];
+  const el=document.createElement('div');
+  el.className='player';
+  el.id='player_'+role;
+  el.dataset.role=role;
+  el.style.setProperty('--role',info.color);
+  el.innerHTML=`<div class="abbr">${info.abbr}</div><div class="name"></div><div class="roleline"></div>`;
+  el.addEventListener('pointerdown',startDrag);
+  court.appendChild(el);
+  return el;
+}
+function startDrag(ev){
+  if(ev.button!==0) return;
+  ev.preventDefault();
+  const role=ev.currentTarget.dataset.role;
+  const el=ev.currentTarget;
+  el.classList.add('drag');
+  el.setPointerCapture(ev.pointerId);
+  const box=court.getBoundingClientRect();
+  const move=(e)=>{
+    const x=clamp((e.clientX-box.left)/box.width,0.07,0.93);
+    const y=clamp((e.clientY-box.top)/box.height,0.08,1.10);
+    el.style.left=(x*100)+'%';
+    el.style.top=(y*100)+'%';
+    const target=ensureCustom(state.rotation,state.phase);
+    target[role]=[+x.toFixed(3),+y.toFixed(3)];
+  };
+  const stop=()=>{
+    el.classList.remove('drag');
+    el.removeEventListener('pointermove',move);
+    el.removeEventListener('pointerup',stop);
+    el.removeEventListener('pointercancel',stop);
+    save();
+  };
+  el.addEventListener('pointermove',move);
+  el.addEventListener('pointerup',stop);
+  el.addEventListener('pointercancel',stop);
+}
+function renderPlayers(){
+  const formation=getFormation(state.rotation,state.phase);
+  for(const role of Object.keys(roles)){
+    const coords=formation[role];
+    let el=$('player_'+role);
+    if(!el) el=createPlayer(role);
+    el.style.setProperty('--role',roles[role].color);
+    el.querySelector('.name').textContent=state.names[role];
+    const outside=coords[1] > 1;
+    el.classList.toggle('outside',outside);
+    el.querySelector('.roleline').textContent=outside?'Serveur':'En jeu';
+    el.style.left=(coords[0]*100)+'%';
+    el.style.top=(coords[1]*100)+'%';
+  }
+}
+function renderLegend(){
+  $('legend').innerHTML=Object.entries(roles).map(([key,info])=>`<span class="chip"><span class="dot" style="--c:${info.color}"></span><strong>${info.abbr}</strong> ${state.names[key]}</span>`).join('');
+}
+function renderButtons(){
+  $('rotationBtns').innerHTML=Array.from({length:6},(_,i)=>`<button type="button" data-r="${i+1}" class="${state.rotation===i+1?'active':''}">R${i+1}</button>`).join('');
+  $('phaseBtns').innerHTML=Object.entries(phaseLabels).map(([key,label])=>`<button type="button" data-phase="${key}" class="${state.phase===key?'active':''}">${label}</button>`).join('');
+}
+function renderEditor(){
+  const host=$('editor');
+  if(host.dataset.ready==='1') return;
+  host.dataset.ready='1';
+  host.innerHTML=Object.entries(roles).map(([key,info])=>`<div class="field"><label for="name_${key}">${info.abbr}</label><input id="name_${key}" value="${state.names[key].replace(/"/g,'&quot;')}"></div>`).join('');
+  Object.keys(roles).forEach(key=>{
+    host.querySelector('#name_'+key).addEventListener('input',e=>{state.names[key]=e.target.value.trim()||roles[key].name; render();});
+  });
+}
+function syncEditorValues(){
+  Object.keys(roles).forEach(key=>{
+    const input=document.getElementById('name_'+key);
+    if(input && input.value!==state.names[key]) input.value=state.names[key];
+  });
+}
+function renderSummary(){
+  $('subtitle').textContent=`Rotation ${state.rotation} · ${phaseLabel()}`;
+  $('serverInfo').textContent=state.serve==='us' ? `Serveur : ${serverRole()}` : `Si récupération : ${serverByRotation[state.rotation===6?1:state.rotation+1]}`;
+  $('scoreUs').textContent=state.scoreUs;
+  $('scoreThem').textContent=state.scoreThem;
+  $('status').textContent=`${state.serve==='us'?'🏐 Notre service — placement libre':'🏐 Réception — ordre de rotation obligatoire'} · R${state.rotation} · ${phaseLabel()}`;
+  $('sumRotation').textContent='R'+state.rotation;
+  $('sumPhase').textContent=phaseLabel();
+  $('sumServe').textContent=state.serve==='us'?'Notre équipe':'Adversaire';
+  $('sumServer').textContent=state.serve==='us' ? serverRole() : serverByRotation[state.rotation===6?1:state.rotation+1];
+  $('phaseExplain').innerHTML=`<strong>${phaseLabel()}</strong> — ${phaseDescriptions[state.phase]}`;
+  $('ruleHint').textContent=state.phase==='serve' ? 'Service libre : les 5 joueurs sont déjà en place. Le serveur désigné reste derrière la ligne de fond.' : state.serve==='them' ? 'Réception : l’ordre relatif des joueurs reste obligatoire au moment du service adverse.' : '↔ Fais glisser un joueur pour personnaliser ce placement.';
+}
+function render(){
+  renderButtons();
+  renderPlayers();
+  renderLegend();
+  renderSummary();
+  renderEditor();
+  syncEditorValues();
+  save();
+}
+$('rotationBtns').addEventListener('click',e=>{const b=e.target.closest('[data-r]'); if(!b) return; setRotation(Number(b.dataset.r));});
+$('phaseBtns').addEventListener('click',e=>{const b=e.target.closest('[data-phase]'); if(!b) return; setPhase(b.dataset.phase);});
+$('won').onclick=()=>changePoint(true);
+$('lost').onclick=()=>changePoint(false);
+$('undo').onclick=()=>{const prev=state.history.pop(); if(!prev) return; Object.assign(state,prev); render();};
+$('resetPhase').onclick=()=>resetCurrentPhase();
+$('resetAll').onclick=()=>{if(confirm('Effacer tous les placements personnalisés ?')) resetPlacements();};
+$('newMatch').onclick=()=>resetMatch();
+if(window.matchMedia('(min-width:761px)').matches) $('playersDetails').open=true;
+render();
+})();
+</script></body></html>
