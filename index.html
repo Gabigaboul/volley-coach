@@ -172,6 +172,26 @@ button{touch-action:manipulation}
   .startServeBox{display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
   .startServeOptions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
 }
+
+/* V21: match setup below the court, not beneath the match score. */
+.main .startServeBox{
+  margin:12px auto 0;width:min(100%,465px);max-width:100%;
+  padding:9px 11px;display:flex;align-items:center;justify-content:space-between;
+  gap:8px;border:1px solid #cfe3e7;background:#f0f8f9;border-radius:9px;
+}
+.main .startServeTitle{flex:1;min-width:0;font-size:11px;white-space:normal;line-height:1.3}
+.main .startServeOptions{flex:0 1 auto;display:flex;align-items:center;justify-content:flex-end;gap:5px;min-width:0}
+.main .startServeOptions button{padding:7px 10px;font-size:11px;min-height:34px}
+@media(max-width:760px){
+  .main .startServeBox{width:min(100%,315px);padding:8px;gap:5px;display:flex;flex-wrap:wrap}
+  .main .startServeTitle{flex:1 1 105px;font-size:11px}
+  .main .startServeOptions{flex:0 1 auto;min-width:0}
+  .main .startServeOptions button{min-height:36px;padding:7px 9px}
+}
+@media(max-width:350px){
+  .main .startServeBox{display:grid;grid-template-columns:1fr}
+  .main .startServeOptions{width:100%;display:grid;grid-template-columns:1fr 1fr}
+}
 </style></head><body><div class="app">
 <header class="top"><div class="brand"><div class="logo">🏐</div><div><h1>Volley Coach Mini</h1><p>Rotations 5–1 · règle FIVB 2025–2028</p></div></div><div class="headerRight"><div class="topBadge" id="tacticalBadge">TABLEAU TACTIQUE</div><div class="languageToggle" role="group" aria-label="Language / Langue"><button id="langFr" type="button" aria-pressed="true">FR</button><button id="langEn" type="button" aria-pressed="false">EN</button></div></div></header>
 <div class="workspace">
@@ -182,9 +202,9 @@ button{touch-action:manipulation}
 </aside>
 <main class="card main"><div class="courtTop"><div><h2>Placement sur le terrain</h2><div class="sub" id="subtitle">Rotation 1 · Home</div></div><span class="pill" id="serverInfo">Serveur : S</span></div>
 <div class="courtStage"><div class="court" id="court"><div class="labelTop">FILET</div><div class="three"></div><div class="midline"></div><div class="labelBot">LIGNE DE FOND ↓</div></div></div>
-<div class="legend" id="legend"></div><div class="hint" id="ruleHint">↔ Déplace un joueur pour personnaliser ce placement.</div></main>
+<div class="legend" id="legend"></div><div class="hint" id="ruleHint">↔ Déplace un joueur pour personnaliser ce placement.</div><div class="startServeBox" id="startServeBox"><span class="startServeTitle" id="startServeTitle"></span><div class="startServeOptions"><button type="button" id="startWithServe"></button><button type="button" id="startWithReceive"></button></div></div></main>
 <aside class="card aside">
-<section class="block"><p class="label">Match en direct</p><div class="startServeBox" id="startServeBox"><span class="startServeTitle" id="startServeTitle"></span><div class="startServeOptions"><button type="button" id="startWithServe"></button><button type="button" id="startWithReceive"></button></div></div><div class="score"><div><div class="scoreLabel">Nous</div><div class="scoreNum" id="scoreUs">0</div></div><div class="dash">:</div><div><div class="scoreLabel">Adversaire</div><div class="scoreNum" id="scoreThem">0</div></div></div><div class="controls"><button class="btn green" id="won">✓ Point gagné</button><button class="btn red" id="lost">✕ Point perdu</button><button class="btn light full" id="undo">↶ Annuler le dernier point</button></div></section>
+<section class="block"><p class="label">Match en direct</p><div class="score"><div><div class="scoreLabel">Nous</div><div class="scoreNum" id="scoreUs">0</div></div><div class="dash">:</div><div><div class="scoreLabel">Adversaire</div><div class="scoreNum" id="scoreThem">0</div></div></div><div class="controls"><button class="btn green" id="won">✓ Point gagné</button><button class="btn red" id="lost">✕ Point perdu</button><button class="btn light full" id="undo">↶ Annuler le dernier point</button></div></section>
 
 </aside></div><section class="card setsPanel" aria-labelledby="setsTitle"><div class="setsTop"><h2 id="setsTitle">Score des sets</h2><span class="setTotals" id="setsTotal">0 – 0</span></div><table class="setsTable"><thead><tr><th id="setCol">Set</th><th id="usCol">Nous</th><th id="themCol">Adversaire</th><th id="startCol">Premier service</th></tr></thead><tbody id="setsBody"></tbody></table><div class="setsActions"><button class="btn light" id="newMatch" type="button">Nouveau match</button></div></section><section class="card customizeCard" aria-labelledby="customTitle">
  <h2 id="customTitle">Personnaliser</h2>
@@ -194,8 +214,8 @@ button{touch-action:manipulation}
 <script>
 (()=>{
 'use strict';
-const STORAGE_KEY='volley-coach-mobile-v20';
-const LEGACY_STORAGE_KEY='volley-coach-mobile-v19';
+const STORAGE_KEY='volley-coach-mobile-v21';
+const LEGACY_STORAGE_KEY='volley-coach-mobile-v20';
 const PREVIOUS_STORAGE_KEY='volley-coach-mini-simplifie-v7';
 const UPDATED_KEY='volley-coach-mobile-v9-migrated';
 const roles={
@@ -264,7 +284,7 @@ const baseFormations={
     base:{OH2:[0.15,0.16],MB1:[0.48,0.16],S:[0.82,0.16],MB2:[0.15,0.63],OH1:[0.50,0.79],RS:[0.82,0.63]}
   }
 };
-const state={rotation:1,phase:'home',serve:'us',scoreUs:0,scoreThem:0,history:[],custom:{},names:{},lang:'fr',customNames:{},setNumber:1,sets:[],firstServe:null,setFirstServe:null,awaitingFirstServe:true,matchOver:false};
+const state={rotation:1,phase:'home',serve:'us',scoreUs:0,scoreThem:0,history:[],custom:{},names:{},lang:'fr',customNames:{},setNumber:1,sets:[],firstServe:null,setFirstServe:null,awaitingFirstServe:true,matchOver:false,previewContext:"us"};
 let upgradingToV16=true;
 try{upgradingToV16=!localStorage.getItem(STORAGE_KEY)}catch(e){}
 try{
@@ -296,6 +316,7 @@ if(!previousV17 && !hadPreviousMatch){
   state.awaitingFirstServe=true;state.matchOver=false;
   state.scoreUs=0;state.scoreThem=0;state.rotation=1;state.phase='home';state.history=[];
 }
+if(!['us','them'].includes(state.previewContext))state.previewContext='us';
 if(!Array.isArray(state.sets))state.sets=[];
 if(!Array.isArray(state.history))state.history=[];
 // Use saved language if available; names remain user-controlled.
@@ -407,12 +428,17 @@ function selectFirstServe(who){
   if(state.matchOver||!state.awaitingFirstServe||!['us','them'].includes(who))return;
   state.setFirstServe=who;state.serve=who;state.awaitingFirstServe=false;
   if(state.setNumber===1)state.firstServe=who;
+  state.previewContext=who;
   state.phase=defaultPhase();render();
 }
 function setPhase(phase){
   if(phaseUnavailable(phase))return;
-  // Un changement de vue ne doit jamais changer qui sert.
-  // Seul le premier service du set et le résultat des échanges le déterminent.
+  // Avant le match : consultation libre et mémorisation du contexte d'affichage,
+  // sans décider du premier service du set.
+  if(state.awaitingFirstServe){
+    if(phase==='serve')state.previewContext='us';
+    if(phase==='receivePrimary')state.previewContext='them';
+  }
   state.phase=phase;
   render();
 }
@@ -456,7 +482,7 @@ function resetMatch(){
   state.scoreUs=0;state.scoreThem=0;state.history=[];
   state.custom={}; // Les schémas verrouillés reviennent, les noms restent.
   state.setNumber=1;state.sets=[];state.firstServe=null;
-  state.setFirstServe=null;state.awaitingFirstServe=true;state.matchOver=false;
+  state.setFirstServe=null;state.awaitingFirstServe=true;state.matchOver=false;state.previewContext='us';
   render();
 }
 function resetCurrentPhase(){
@@ -522,8 +548,9 @@ function renderLegend(){
   $('legend').innerHTML=Object.entries(roles).map(([key,info])=>`<span class="chip"><span class="dot" style="--c:${info.color}"></span><strong>${info.abbr}</strong> ${escapeHtml(state.names[key])}</span>`).join('');
 }
 function phaseUnavailable(key){
-  if(state.awaitingFirstServe) return key==='serve'||key==='receivePrimary';
-  // Une seule situation de jeu réelle à la fois, y compris depuis Départ.
+  // Avant de commencer, toutes les phases peuvent être consultées.
+  if(state.awaitingFirstServe)return false;
+  // Après le choix, la phase contraire au service réel est désactivée.
   return (state.serve==='us' && key==='receivePrimary') ||
          (state.serve==='them' && key==='serve');
 }
@@ -540,7 +567,7 @@ function renderButtons(){
   indicator.hidden=false;
   indicator.dataset.mode=state.awaitingFirstServe?'choose':(state.serve==='us'?'serve':'receive');
   indicator.textContent=state.awaitingFirstServe
-    ?(lang==='fr'?'Choisir le premier service du set':'Choose first serve for this set')
+    ?(lang==='fr'?'Mode consultation · rotations libres':'Preview mode · explore all rotations')
     :(state.serve==='us'
        ?(lang==='fr'?'🏐 Notre service':'🏐 Our serve')
        :(lang==='fr'?'🏐 Réception · service adverse':'🏐 Receiving · opponent serves'));
@@ -565,14 +592,13 @@ function renderSummary(){
   const t=translations[lang];
   const next=serverByRotation[state.rotation===6?1:state.rotation+1];
   $('subtitle').textContent=`${t.rotationWord} ${state.rotation} · ${phaseLabel()}`;
-  $('serverInfo').textContent=state.awaitingFirstServe
-    ?(lang==='fr'?'Service à choisir':'Choose serve')
-    :state.serve==='us'
-      ?`${t.server} : ${displayRole(serverRole())}`
-      :`${t.nextServer} : ${displayRole(next)}`;
+  const showingServe=state.awaitingFirstServe?state.previewContext==='us':state.serve==='us';
+  $('serverInfo').textContent=showingServe
+    ?`${t.server} : ${displayRole(serverRole())}`
+    :`${t.nextServer} : ${displayRole(next)}`;
   $('scoreUs').textContent=state.scoreUs;
   $('scoreThem').textContent=state.scoreThem;
-  $('ruleHint').textContent=state.phase==='serve'?t.serveHint:state.serve==='them'?t.receiveHint:t.dragHint;
+  $('ruleHint').textContent=state.phase==='serve'?t.serveHint:state.phase==='receivePrimary'?t.receiveHint:t.dragHint;
 }
 function renderSets(){
   const t=translations[lang], wins=matchWins();
@@ -596,22 +622,22 @@ function renderSets(){
   $('setsBody').innerHTML=rows.join('');
 }
 function renderSetStart(){
-  const t=translations[lang];
   const panel=$('startServeBox');
   panel.hidden=state.matchOver;
-  $('startServeTitle').textContent=state.setNumber===5 && state.awaitingFirstServe
-    ? (lang==='fr'?'Set 5 · Tirage':'Set 5 · Toss')
-    : (state.awaitingFirstServe
-       ? `${t.setLabel} ${state.setNumber} ·`
-       : (lang==='fr'?'Service actuel ·':'Current serve ·'));
+  const choosing=state.awaitingFirstServe;
+  $('startServeTitle').textContent=choosing
+    ?(state.setNumber===5
+       ?(lang==='fr'?'Set 5 · Tirage :':'Set 5 · Toss:')
+       :(lang==='fr'?'Commencer un match ·':'Start match ·'))
+    :(lang==='fr'?'Service actuel ·':'Current serve ·');
   $('startWithServe').textContent=lang==='fr'?'Service':'Serve';
   $('startWithReceive').textContent=lang==='fr'?'Récept':'Receive';
-  $('startWithServe').setAttribute('aria-pressed',String(!state.awaitingFirstServe&&state.serve==='us'));
-  $('startWithReceive').setAttribute('aria-pressed',String(!state.awaitingFirstServe&&state.serve==='them'));
-  $('startWithServe').disabled=!state.awaitingFirstServe;
-  $('startWithReceive').disabled=!state.awaitingFirstServe;
-  $('won').disabled=state.matchOver||state.awaitingFirstServe;
-  $('lost').disabled=state.matchOver||state.awaitingFirstServe;
+  $('startWithServe').setAttribute('aria-pressed',String(!choosing&&state.serve==='us'));
+  $('startWithReceive').setAttribute('aria-pressed',String(!choosing&&state.serve==='them'));
+  $('startWithServe').disabled=!choosing;
+  $('startWithReceive').disabled=!choosing;
+  $('won').disabled=state.matchOver||choosing;
+  $('lost').disabled=state.matchOver||choosing;
   $('undo').disabled=state.history.length===0;
   $('won').style.opacity=$('won').disabled?'.45':'1';
   $('lost').style.opacity=$('lost').disabled?'.45':'1';
