@@ -1,5 +1,5 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f0f4f7"><title>Volley Coach Mini — Rotations 5–1</title><style>
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#172f43;background:#f0f4f7;--navy:#173145;--blue:#147c88;--sub:#64798c;--line:#e1e8ed}*{box-sizing:border-box}body{margin:0}.app{max-width:1240px;margin:auto;padding:15px 18px 18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.brand{display:flex;align-items:center;gap:10px}.logo{background:#0a7782;color:#fff;width:35px;height:35px;border-radius:11px;display:grid;place-items:center;font-size:19px}.brand h1{font-size:19px;line-height:1.1;letter-spacing:-.04em;margin:0}.brand p{font-size:11px;color:var(--sub);margin:3px 0 0}.topBadge{font-size:11px;font-weight:800;color:#166b6c;background:#dff4f0;padding:8px 11px;border-radius:999px}.workspace{display:grid;grid-template-columns:226px minmax(0,1fr) 258px;gap:12px;align-items:stretch}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 5px 15px #1a3d4c08;min-width:0}.sidebar,.aside{display:flex;flex-direction:column;gap:14px}.block{min-width:0}.label{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:900;color:#75899b;margin:0 0 9px}.card h2{margin:0;color:#172f43;font-size:15px;letter-spacing:-.02em}.small{color:#65788b;font-size:11px;line-height:1.45;margin:7px 0}.segment{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.segment button,.phase button{border:1px solid #e4ebf0;background:#f7f9fb;color:#4d667a;cursor:pointer;font-weight:800;border-radius:9px;padding:10px 5px;font-size:12px}.segment button.active,.phase button.active{background:#087b85;border-color:#087b85;color:#fff}.phase{display:grid;grid-template-columns:1fr;gap:6px}.phase button{display:flex;text-align:left;align-items:center;justify-content:space-between;gap:8px;padding:10px 11px}.phase button::after{content:'›';opacity:.45;font-size:18px;font-weight:400;line-height:8px}.phase button.active::after{opacity:1}.divider{border:0;border-top:1px solid var(--line);margin:0}.editor{display:grid;grid-template-columns:1fr;gap:5px}.field{display:flex;align-items:center;justify-content:space-between;gap:8px}.field label{min-width:43px;font-size:11px;font-weight:900;color:#4c6579}.field input{min-width:0;width:100%;padding:7px 8px;border:1px solid #e2eaf0;border-radius:7px;font-size:11px;color:#263e52;background:#fafcfd}.main{display:flex;flex-direction:column;gap:0}.courtTop{display:flex;align-items:center;justify-content:space-between;gap:8px}.sub{font-size:11px;color:var(--sub);margin-top:3px}.pill{background:#e6f4f1;color:#137368;border-radius:999px;font-size:10px;padding:7px 10px;font-weight:900;white-space:nowrap}.courtStage{width:min(100%,465px);margin:12px auto 0;padding:0 5px 34px}.court{position:relative;width:100%;aspect-ratio:1.28/1;background:linear-gradient(180deg,#f1d1a7,#e8b67d);border:4px solid #d9a46e;box-shadow:inset 0 0 0 2px #fff;border-radius:8px;overflow:visible;touch-action:none}.court .midline{position:absolute;left:0;right:0;top:0;border-top:4px solid #fff}.court .three{position:absolute;left:0;right:0;top:38%;border-top:2px solid #fff9}.court .labelTop{position:absolute;top:-19px;left:0;right:0;text-align:center;color:#7890a0;font-size:9px;font-weight:900;letter-spacing:.12em}.court .labelBot{position:absolute;bottom:2%;left:0;right:0;text-align:center;color:#ac7851;font-weight:800;letter-spacing:.12em;font-size:9px;opacity:.55}.player{position:absolute;z-index:2;width:62px;height:51px;transform:translate(-50%,-50%);background:white;border:2px solid var(--role);border-radius:10px;box-shadow:0 3px 9px #6d513b33;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;cursor:grab;user-select:none;transition:left .5s cubic-bezier(.2,.85,.2,1),top .5s cubic-bezier(.2,.85,.2,1)}.player.drag{transition:none;z-index:10;cursor:grabbing;box-shadow:0 7px 15px #48372455}.player .abbr{color:var(--role);font-size:16px;font-weight:950;line-height:1}.player .name{font-size:8px;font-weight:700;text-align:center;color:#526a7b;max-width:58px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.player .roleline{display:none}.player.outside .abbr::after{content:' •';font-size:8px;color:#087b85}.legend{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:2px 0 8px}.chip{font-size:10px;color:#52677a;background:#f4f7f9;padding:5px 7px;border-radius:7px;display:flex;gap:5px;align-items:center}.chip strong{color:#233e52}.dot{background:var(--c);height:7px;width:7px;border-radius:50%}.hint{text-align:center;font-size:11px;color:#7a8b9b;padding:7px 0 0;margin-top:auto}.score{display:grid;grid-template-columns:1fr 20px 1fr;align-items:center;background:#f5f8fa;padding:11px 8px;border-radius:12px;margin:9px 0 8px}.scoreLabel{font-size:10px;text-transform:uppercase;color:#718598;font-weight:800;text-align:center}.scoreNum{text-align:center;font-size:38px;font-weight:900;line-height:1.15;letter-spacing:-.06em}.dash{color:#9bb0bb;font-size:21px;text-align:center}.status{padding:10px;background:#e8f6f2;border-radius:9px;color:#146e65;font-weight:800;font-size:11px;line-height:1.5}.controls{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.btn{cursor:pointer;border:0;border-radius:9px;padding:11px 8px;font-size:11px;font-weight:900;transition:filter .13s}.btn:hover{filter:brightness(.96)}.btn.green{background:#118665;color:#fff}.btn.red{background:#ca5554;color:#fff}.btn.blue{background:#147d89;color:white}.btn.light{background:#edf3f6;color:#3c5b70}.btn.full{grid-column:1/-1;padding:7px 6px;background:#f1f5f8;color:#486275}.quick{display:grid;grid-template-columns:1fr 1fr;gap:6px}.quick .btn{padding:9px 6px}.micro{font-size:10px;line-height:1.45;color:#778999;margin:0}.footer{font-size:10px;line-height:1.5;color:#7890a0;margin-top:11px}.mobileBar{display:none}
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#173145;background:#ecf4f5;--navy:#173145;--blue:#147c88;--blue-dark:#0f6972;--blue-soft:#dff1f2;--sub:#61788d;--line:#d6e3e7;--surface:#ffffff}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#f4f8f8 0%,#eaf2f3 100%)}.app{max-width:1240px;margin:auto;padding:15px 18px 18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.brand{display:flex;align-items:center;gap:10px}.logo{background:linear-gradient(135deg,#147c88,#0f6972);color:#fff;width:35px;height:35px;border-radius:10px;display:grid;place-items:center;font-size:19px;box-shadow:0 8px 18px rgba(20,124,136,.18)}.brand h1{font-size:19px;line-height:1.1;letter-spacing:-.04em;margin:0}.brand p{font-size:11px;color:var(--sub);margin:3px 0 0}.topBadge{font-size:11px;font-weight:800;color:#0f6972;background:#dff1f2;padding:8px 11px;border-radius:10px;border:1px solid #c6e4e7}.workspace{display:grid;grid-template-columns:226px minmax(0,1fr) 258px;gap:12px;align-items:stretch}.card{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:0 10px 30px rgba(23,49,69,.06);backdrop-filter:blur(6px);min-width:0}.sidebar,.aside{display:flex;flex-direction:column;gap:14px}.block{min-width:0}.label{font-size:10px;letter-spacing:.09em;text-transform:uppercase;font-weight:900;color:#75899b;margin:0 0 9px}.card h2{margin:0;color:#172f43;font-size:15px;letter-spacing:-.02em}.small{color:#65788b;font-size:11px;line-height:1.45;margin:7px 0}.segment{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.segment button,.phase button{border:1px solid #d8e6ea;background:#f8fbfb;color:#4d667a;cursor:pointer;font-weight:800;border-radius:8px;padding:10px 5px;font-size:12px;transition:all .16s ease}.segment button.active,.phase button.active{background:linear-gradient(135deg,#147c88,#0f6972);border-color:#0f6972;color:#fff;box-shadow:0 8px 20px rgba(20,124,136,.18)}.phase{display:grid;grid-template-columns:1fr;gap:6px}.phase button{display:flex;text-align:left;align-items:center;justify-content:space-between;gap:8px;padding:10px 11px}.phase button::after{content:'›';opacity:.45;font-size:18px;font-weight:400;line-height:8px}.phase button.active::after{opacity:1}.divider{border:0;border-top:1px solid var(--line);margin:0}.editor{display:grid;grid-template-columns:1fr;gap:5px}.field{display:flex;align-items:center;justify-content:space-between;gap:8px}.field label{min-width:43px;font-size:11px;font-weight:900;color:#4c6579}.field input{min-width:0;width:100%;padding:7px 8px;border:1px solid #d7e5e9;border-radius:8px;font-size:11px;color:#263e52;background:#fbfdfd}.main{display:flex;flex-direction:column;gap:0}.courtTop{display:flex;align-items:center;justify-content:space-between;gap:8px}.sub{font-size:11px;color:var(--sub);margin-top:3px}.pill{background:#dff1f2;color:#0f6972;border-radius:10px;font-size:10px;padding:7px 10px;font-weight:900;white-space:nowrap;border:1px solid #c9e6e8}.courtStage{width:min(100%,465px);margin:12px auto 0;padding:0 5px 34px}.court{position:relative;width:100%;aspect-ratio:1.28/1;background:linear-gradient(180deg,#4db7bf 0%,#2c9ea8 50%,#238892 100%);border:4px solid #2a8a93;box-shadow:inset 0 0 0 2px rgba(255,255,255,.95), 0 16px 34px rgba(15,105,114,.14);border-radius:10px;overflow:visible;touch-action:none}.court .midline{position:absolute;left:0;right:0;top:0;border-top:4px solid #fff}.court .three{position:absolute;left:0;right:0;top:38%;border-top:2px solid #fff9}.court .labelTop{position:absolute;top:-19px;left:0;right:0;text-align:center;color:#7890a0;font-size:9px;font-weight:900;letter-spacing:.12em}.court .labelBot{position:absolute;bottom:2%;left:0;right:0;text-align:center;color:rgba(255,255,255,.55);font-weight:800;letter-spacing:.12em;font-size:9px;opacity:.9}.player{position:absolute;z-index:2;width:62px;height:51px;transform:translate(-50%,-50%);background:rgba(255,255,255,.98);border:2px solid var(--role);border-radius:8px;box-shadow:0 10px 20px rgba(23,49,69,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;cursor:grab;user-select:none;transition:left .5s cubic-bezier(.2,.85,.2,1),top .5s cubic-bezier(.2,.85,.2,1)}.player.drag{transition:none;z-index:10;cursor:grabbing;box-shadow:0 16px 28px rgba(23,49,69,.22)}.player .abbr{color:var(--role);font-size:16px;font-weight:950;line-height:1}.player .name{font-size:8px;font-weight:700;text-align:center;color:#526a7b;max-width:58px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.player .roleline{display:none}.player.outside .abbr::after{content:' •';font-size:8px;color:#087b85}.legend{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin:2px 0 8px}.chip{font-size:10px;color:#52677a;background:#f6fbfb;padding:5px 7px;border-radius:8px;display:flex;gap:5px;align-items:center;border:1px solid #dfebee}.chip strong{color:#233e52}.dot{background:var(--c);height:7px;width:7px;border-radius:50%}.hint{text-align:center;font-size:11px;color:#7a8b9b;padding:7px 0 0;margin-top:auto}.score{display:grid;grid-template-columns:1fr 20px 1fr;align-items:center;background:#f4f9fa;padding:11px 8px;border-radius:10px;margin:9px 0 8px;border:1px solid #e0ecef}.scoreLabel{font-size:10px;text-transform:uppercase;color:#718598;font-weight:800;text-align:center}.scoreNum{text-align:center;font-size:38px;font-weight:900;line-height:1.15;letter-spacing:-.06em}.dash{color:#9bb0bb;font-size:21px;text-align:center}.status{padding:10px;background:#e4f3f4;border-radius:8px;color:#0f6972;font-weight:800;font-size:11px;line-height:1.5;border:1px solid #d1e8ea}.controls{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.btn{cursor:pointer;border:0;border-radius:8px;padding:11px 8px;font-size:11px;font-weight:900;transition:filter .13s, transform .13s, box-shadow .13s}.btn:hover{filter:brightness(.98);transform:translateY(-1px)}.btn.green{background:linear-gradient(135deg,#188c6a,#12765a);color:#fff;box-shadow:0 8px 18px rgba(17,134,101,.18)}.btn.red{background:linear-gradient(135deg,#d45f5e,#b94645);color:#fff;box-shadow:0 8px 18px rgba(202,85,84,.16)}.btn.blue{background:linear-gradient(135deg,#147c88,#0f6972);color:white;box-shadow:0 8px 18px rgba(20,124,136,.16)}.btn.light{background:#f4f9fa;color:#3c5b70;border:1px solid #deeaee}.btn.full{grid-column:1/-1;padding:7px 6px;background:#f1f5f8;color:#486275}.quick{display:grid;grid-template-columns:1fr 1fr;gap:6px}.quick .btn{padding:9px 6px}.micro{font-size:10px;line-height:1.45;color:#778999;margin:0}.footer{font-size:10px;line-height:1.5;color:#7890a0;margin-top:11px}.mobileBar{display:none}
 @media(max-width:980px){.workspace{grid-template-columns:190px minmax(0,1fr) 220px;gap:9px}.app{padding:12px}.card{padding:12px}.courtStage{width:min(100%,425px)}.player{width:56px;height:49px}.player .abbr{font-size:14px}}
 @media(max-width:760px){.workspace{grid-template-columns:1fr 1fr}.main{grid-column:1/-1;grid-row:1}.sidebar{grid-column:1}.aside{grid-column:2}.courtStage{width:min(100%,390px)}.phase{grid-template-columns:repeat(2,minmax(0,1fr))}.editor{grid-template-columns:1fr 1fr}.topBadge{display:none}}
 @media(max-width:480px){.app{padding:10px}.workspace{grid-template-columns:1fr;gap:9px}.main,.sidebar,.aside{grid-column:auto;grid-row:auto}.main{grid-row:1}.aside{grid-row:2}.sidebar{grid-row:3}.card{padding:12px}.courtStage{width:min(100%,350px);padding-bottom:32px}.player{width:48px;height:43px;border-radius:8px}.player .abbr{font-size:13px}.player .name{font-size:7px;max-width:45px}.phase{grid-template-columns:1fr 1fr}.scoreNum{font-size:32px}.sidebar .phase{grid-template-columns:1fr 1fr}.editor{grid-template-columns:1fr 1fr}.small{font-size:11px}}
@@ -9,14 +9,14 @@
 .app{max-width:1000px;padding:8px 10px 10px}
 .top{margin-bottom:6px;gap:8px}.brand{gap:7px}.brand h1{font-size:15px}.brand p{font-size:9px;margin-top:1px}.logo{width:27px;height:27px;border-radius:8px;font-size:15px}.topBadge{font-size:9px;padding:5px 8px}
 .workspace{grid-template-columns:174px minmax(0,1fr) 198px;gap:7px;align-items:start}
-.card{padding:9px;border-radius:11px;box-shadow:0 2px 9px #1a3d4c08}
+.card{padding:9px;border-radius:12px;box-shadow:0 8px 24px rgba(23,49,69,.06)}
 .sidebar,.aside{gap:8px}.label{font-size:9px;margin-bottom:5px;letter-spacing:.06em}
-.segment{gap:4px}.segment button,.phase button{font-size:10px;border-radius:6px;padding:6px 3px}
+.segment{gap:4px}.segment button,.phase button{font-size:10px;border-radius:7px;padding:6px 3px}
 .phase{gap:4px}.phase button{padding:6px 7px;gap:3px}.phase button::after{font-size:13px}
 .field{gap:4px}.field label{min-width:30px;font-size:9px}.field input{padding:4px 5px;border-radius:5px;font-size:10px}.editor{gap:4px}
 .small{font-size:9px;margin:4px 0;line-height:1.3}.micro,.footer{font-size:9px;line-height:1.35}
 .card h2{font-size:12px}.sub{font-size:9px;margin-top:2px}.pill{font-size:9px;padding:4px 7px}
-.courtStage{width:min(100%,310px);margin:13px auto 0;padding:0 5px 25px}.court{border-width:3px;border-radius:6px}.court .labelTop{top:-14px;font-size:8px}.court .labelBot{font-size:7px}
+.courtStage{width:min(100%,310px);margin:13px auto 0;padding:0 5px 25px}.court{border-width:3px;border-radius:8px}.court .labelTop{top:-14px;font-size:8px}.court .labelBot{font-size:7px}
 .player{width:46px;height:37px;border-radius:7px;border-width:1.5px}.player .abbr{font-size:12px}.player .name{font-size:7px;max-width:43px}
 .legend{gap:3px;margin:1px 0 5px}.chip{font-size:8px;padding:3px 5px;border-radius:5px;gap:3px}.dot{width:5px;height:5px}.hint{font-size:9px;padding-top:3px}
 .score{padding:7px 5px;margin:4px 0 5px;border-radius:8px}.scoreLabel{font-size:9px}.scoreNum{font-size:27px}.dash{font-size:16px}.status{font-size:9px;padding:6px;border-radius:6px;line-height:1.35}
@@ -68,41 +68,151 @@ button{touch-action:manipulation}
  .courtStage{padding-left:8px;padding-right:8px}
  .player{width:42px;height:39px}.player .name{font-size:7px}
 }
+
+/* Personnalisation toujours visible, en toute fin de page. */
+.customizeCard{margin-top:12px;padding:14px 16px}
+.customizeCard h2{font-size:15px;margin:0 0 5px}
+.customizeCard .small{margin:0 0 12px}
+.customizeCard .editor{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 14px}
+.customizeCard .field{display:flex;align-items:center;gap:8px}
+.customizeCard .field label{min-width:35px;font-size:11px}
+.customizeCard .field input{min-width:0;width:100%;padding:10px 9px;font-size:14px;border-radius:9px}
+@media(max-width:760px){
+ .customizeCard{margin-top:10px;padding:14px}
+ .customizeCard .editor{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 8px}
+ .customizeCard .field{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+ .customizeCard .field input{font-size:16px;min-height:44px}
+ .customizeCard .field label{font-size:12px}
+}
+@media(max-width:350px){.customizeCard .editor{grid-template-columns:1fr 1fr}}
+
+.headerRight{display:flex;align-items:center;gap:7px}.languageToggle{display:flex;padding:3px;background:#e0eef0;border:1px solid #c5dee2;border-radius:8px;gap:2px}.languageToggle button{border:0;background:transparent;color:#49687a;font-size:11px;font-weight:900;padding:7px 10px;border-radius:6px;cursor:pointer}.languageToggle button[aria-pressed="true"]{color:#fff;background:#127783;box-shadow:0 2px 6px #0f697233}.headerRight .topBadge{display:none}@media(min-width:761px){.headerRight .topBadge{display:inline-flex}.languageToggle button{font-size:10px;padding:5px 8px}}@media(max-width:350px){.languageToggle button{padding:6px 7px}}
+
+/* Contexte conservé entre phase de service/réception et position de jeu. */
+.phase button:disabled,
+.phase button.is-unavailable{
+ background:#edf1f3 !important;
+ color:#a3afb8 !important;
+ border-color:#e3e8eb !important;
+ opacity:.52;
+ box-shadow:none !important;
+ cursor:not-allowed;
+ filter:grayscale(1);
+ transform:none !important;
+}
+.phase button:disabled::after{opacity:.15}
+.phaseContext{
+ margin-top:8px;
+ padding:8px 9px;
+ border-radius:8px;
+ font-size:10px;
+ font-weight:750;
+ line-height:1.4;
+ border:1px solid #d3e7e9;
+ background:#eaf6f6;
+ color:#116973;
+}
+.phaseContext[data-mode="choose"]{background:#f8f9fa;color:#758899;border-color:#e5eaed}.phaseContext[data-mode="receive"]{
+ background:#eef3f6;
+ border-color:#dce7ed;
+ color:#536d7e;
+}
+@media(max-width:760px){
+ .phaseContext{font-size:11px;padding:9px 10px}
+}
+
+/* V17 — Match multi-sets : contrôles de départ et feuille de score. */
+.startServeBox{border:1px solid #c8e2e5;background:#f0fafa;border-radius:10px;padding:10px;margin:0 0 10px}
+.startServeTitle{font-size:11px;font-weight:900;color:#116974;margin:0 0 7px}
+.startServeOptions{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.startServeOptions button{cursor:pointer;border:1px solid #bcdbe0;background:#fff;border-radius:8px;padding:9px 7px;color:#375669;font-size:11px;font-weight:850;min-height:36px}
+.startServeOptions button[aria-pressed=true]{background:#147c88;color:#fff;border-color:#147c88}
+.startServeOptions button:disabled{opacity:.5;cursor:not-allowed}
+.setCaption{font-size:10px;color:#547688;line-height:1.45;margin:7px 0 0}
+.setsPanel{margin-top:10px}
+.setsTop{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:9px}
+.setsTop h2{margin:0;font-size:15px}
+.setTotals{font-size:11px;color:#126e77;font-weight:900;background:#e5f5f6;padding:6px 9px;border-radius:7px}
+.setsTable{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+.setsTable th{text-align:left;font-size:10px;color:#6a8291;font-weight:850;padding:8px 9px;border-bottom:1px solid #d8e6e8}
+.setsTable td{padding:9px;border-bottom:1px solid #e2ecef;color:#34536a;font-weight:700}
+.setsTable th:nth-child(2),.setsTable th:nth-child(3),.setsTable td:nth-child(2),.setsTable td:nth-child(3){text-align:center}
+.setsTable tr:last-child td{border-bottom:0}
+.setsTable tr.is-current{background:#e8f7f7}
+.setsTable .setWinner{color:#0b8073;font-weight:950}
+.setsMessage{font-size:11px;color:#667f90;margin:9px 0 0;line-height:1.5}
+@media(max-width:760px){.startServeBox{padding:9px}.startServeOptions button{min-height:42px;font-size:12px}.setsPanel{margin-top:9px}}
+
+/* V18 : interface de match allégée */
+.startServeBox[hidden]{display:none!important}
+.startServeBox{display:flex;align-items:center;gap:8px;padding:6px 8px;margin:0 0 7px;border-radius:7px;background:#f5f9fa;border-color:#dbe8eb}
+.startServeTitle{font-size:10px;color:#547384;white-space:nowrap;margin:0;font-weight:800;flex-shrink:0}
+.startServeOptions{display:flex;gap:4px;flex:1;justify-content:flex-end}
+.startServeOptions button{min-height:28px;padding:5px 9px;font-size:10px;line-height:1.2;border-radius:6px;white-space:nowrap}
+.startServeOptions button:disabled{opacity:.45;cursor:default}
+.startServeOptions button:disabled[aria-pressed=true]{opacity:1;background:#147c88;color:#fff;border-color:#147c88;box-shadow:0 2px 7px #147c8830}
+.setsActions{display:flex;justify-content:flex-end;border-top:1px solid #e1ecee;margin-top:9px;padding-top:10px}
+.setsActions .btn{min-width:116px;font-size:11px;padding:9px 13px}
+.aside .block{margin:0}
+@media(max-width:760px){.startServeBox{gap:6px;padding:6px}.startServeTitle{font-size:10px}.startServeOptions button{min-height:32px;font-size:11px;padding:6px 8px}.setsActions .btn{min-height:40px}}
+
+/* V20: la sélection de service ne peut jamais déborder du panneau. */
+.startServeBox{min-width:0;max-width:100%;box-sizing:border-box}
+.startServeTitle{min-width:0}
+.startServeOptions{min-width:0;max-width:100%;box-sizing:border-box}
+.startServeOptions button{min-width:0;max-width:100%;box-sizing:border-box;overflow:hidden;text-overflow:ellipsis}
+.aside .block{container-type:inline-size}
+@container (max-width: 255px){
+  .startServeBox{display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
+  .startServeTitle{white-space:normal;line-height:1.3}
+  .startServeOptions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:5px}
+  .startServeOptions button{padding:6px 3px;font-size:10px;white-space:nowrap}
+}
+@media(max-width:380px){
+  .startServeBox{display:grid;grid-template-columns:minmax(0,1fr);gap:5px}
+  .startServeOptions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+}
 </style></head><body><div class="app">
-<header class="top"><div class="brand"><div class="logo">🏐</div><div><h1>Volley Coach Mini</h1><p>Rotations 5–1 · règle FIVB 2025–2028</p></div></div><div class="topBadge">TABLEAU TACTIQUE</div></header>
+<header class="top"><div class="brand"><div class="logo">🏐</div><div><h1>Volley Coach Mini</h1><p>Rotations 5–1 · règle FIVB 2025–2028</p></div></div><div class="headerRight"><div class="topBadge" id="tacticalBadge">TABLEAU TACTIQUE</div><div class="languageToggle" role="group" aria-label="Language / Langue"><button id="langFr" type="button" aria-pressed="true">FR</button><button id="langEn" type="button" aria-pressed="false">EN</button></div></div></header>
 <div class="workspace">
 <aside class="card sidebar">
 <section class="block"><p class="label">01 / Rotation</p><div class="segment" id="rotationBtns"></div></section>
 <hr class="divider">
-<section class="block"><p class="label">02 / Phase de jeu</p><div class="phase" id="phaseBtns"></div></section>
-<hr class="divider">
-<details class="block playersDetails" id="playersDetails"><summary class="label">Joueurs · modifier les noms</summary><div class="editor" id="editor"></div></details>
+<section class="block"><p class="label">02 / Phase de jeu</p><div class="phase" id="phaseBtns"></div><div class="phaseContext" id="phaseContext" role="status" aria-live="polite" hidden></div></section>
 </aside>
 <main class="card main"><div class="courtTop"><div><h2>Placement sur le terrain</h2><div class="sub" id="subtitle">Rotation 1 · Home</div></div><span class="pill" id="serverInfo">Serveur : S</span></div>
 <div class="courtStage"><div class="court" id="court"><div class="labelTop">FILET</div><div class="three"></div><div class="midline"></div><div class="labelBot">LIGNE DE FOND ↓</div></div></div>
 <div class="legend" id="legend"></div><div class="hint" id="ruleHint">↔ Déplace un joueur pour personnaliser ce placement.</div></main>
 <aside class="card aside">
-<section class="block"><p class="label">Match en direct</p><div class="score"><div><div class="scoreLabel">Nous</div><div class="scoreNum" id="scoreUs">0</div></div><div class="dash">:</div><div><div class="scoreLabel">Adversaire</div><div class="scoreNum" id="scoreThem">0</div></div></div><div class="status" id="status">Service : notre équipe · rotation 1</div><div class="controls"><button class="btn green" id="won">✓ Point gagné</button><button class="btn red" id="lost">✕ Point perdu</button><button class="btn light full" id="undo">↶ Annuler le dernier point</button></div></section>
+<section class="block"><p class="label">Match en direct</p><div class="startServeBox" id="startServeBox"><span class="startServeTitle" id="startServeTitle"></span><div class="startServeOptions"><button type="button" id="startWithServe"></button><button type="button" id="startWithReceive"></button></div></div><div class="score"><div><div class="scoreLabel">Nous</div><div class="scoreNum" id="scoreUs">0</div></div><div class="dash">:</div><div><div class="scoreLabel">Adversaire</div><div class="scoreNum" id="scoreThem">0</div></div></div><div class="controls"><button class="btn green" id="won">✓ Point gagné</button><button class="btn red" id="lost">✕ Point perdu</button><button class="btn light full" id="undo">↶ Annuler le dernier point</button></div></section>
 
-<hr class="divider">
-<section class="block"><p class="label">Situation</p><div class="sub"><strong id="sumRotation">R1</strong> · <span id="sumPhase">Home</span> · Serveur <span id="sumServer">S</span></div><div class="small" id="phaseExplain"></div><div style="display:none" id="sumServe"></div></section>
-<hr class="divider">
-<section class="block"><p class="label">Outils</p><div class="quick"><button class="btn light" id="newMatch">Nouveau match</button><button class="btn light" id="resetPhase">Effacer phase</button><button class="btn light" id="resetAll">Effacer tout</button></div><p class="micro" style="margin-top:9px">Départ = ordre de rotation ; Défense = placement tactique après service. Les réglages sont sauvegardés.</p></section>
-</aside></div><div class="footer">Règle FIVB 2025–2028, art. 7.4 : au service, liberté de placement (sauf serveur hors terrain) ; en réception, respect de l’ordre de rotation. Les rôles avant/arrière et l’ordre des serveurs restent inchangés.</div></div>
+</aside></div><section class="card setsPanel" aria-labelledby="setsTitle"><div class="setsTop"><h2 id="setsTitle">Score des sets</h2><span class="setTotals" id="setsTotal">0 – 0</span></div><table class="setsTable"><thead><tr><th id="setCol">Set</th><th id="usCol">Nous</th><th id="themCol">Adversaire</th><th id="startCol">Premier service</th></tr></thead><tbody id="setsBody"></tbody></table><div class="setsActions"><button class="btn light" id="newMatch" type="button">Nouveau match</button></div></section><section class="card customizeCard" aria-labelledby="customTitle">
+ <h2 id="customTitle">Personnaliser</h2>
+ <p class="small">Renseigne les noms des joueurs : ils s’affichent sous leur poste sur le terrain.</p>
+ <div class="editor" id="editor"></div>
+</section></div>
 <script>
 (()=>{
 'use strict';
-const STORAGE_KEY='volley-coach-mobile-v8';
+const STORAGE_KEY='volley-coach-mobile-v20';
+const LEGACY_STORAGE_KEY='volley-coach-mobile-v19';
 const PREVIOUS_STORAGE_KEY='volley-coach-mini-simplifie-v7';
+const UPDATED_KEY='volley-coach-mobile-v9-migrated';
 const roles={
   S:{abbr:'S', name:'Passeur', color:'#1f6fd0'},
-  RS:{abbr:'RS', name:'Pointu / Opposite', color:'#cb4f5f'},
+  RS:{abbr:'Opp', name:'Opposite', color:'#cb4f5f'},
   OH1:{abbr:'OH1', name:'Allier 1', color:'#8456d3'},
   OH2:{abbr:'OH2', name:'Allier 2', color:'#9564e6'},
   MB1:{abbr:'MB1', name:'Central 1', color:'#d0872a'},
   MB2:{abbr:'MB2', name:'Central 2', color:'#c97024'}
 };
-const phaseLabels={home:'Départ',serve:'Service',receivePrimary:'Réception',base:'Défense'};
+const translations={
+ fr:{tagline:'Rotations 5–1 · règle FIVB 2025–2028',tactical:'TABLEAU TACTIQUE',rotationLabel:'01 / ROTATION',phaseLabel:'02 / PHASE DE JEU',courtTitle:'Placement sur le terrain',net:'FILET',baseline:'LIGNE DE FOND ↓',live:'Match en direct',us:'Nous',them:'Adversaire',won:'✓ Point gagné',lost:'✕ Point perdu',undo:'↶ Annuler le dernier point',situation:'Situation',tools:'Outils',newMatch:'Nouveau match',clearPhase:'Effacer phase',clearAll:'Effacer tout',micro:'Départ = ordre de rotation ; Position de jeu = placement tactique pendant l’échange, après le service ou la réception. Les réglages sont sauvegardés.',footer:'Règle FIVB 2025–2028, art. 7.4 : au service, liberté de placement (sauf serveur hors terrain) ; en réception, respect de l’ordre de rotation. Les rôles avant/arrière et l’ordre des serveurs restent inchangés.',customize:'Personnaliser',customInfo:'Renseigne les noms des joueurs : ils s’affichent sous leur poste sur le terrain.',rotationWord:'Rotation',server:'Serveur',nextServer:'Prochain serveur',ourServe:'🏐 Notre service — placement libre',theirServe:'🏐 Réception — ordre de rotation obligatoire',serveHint:'Service libre : les 5 joueurs sont déjà en place. Le serveur désigné reste derrière la ligne de fond.',receiveHint:'Réception : l’ordre relatif des joueurs reste obligatoire au moment du service adverse.',dragHint:'↔ Fais glisser un joueur pour personnaliser ce placement.',inPlay:'En jeu',confirmReset:'Effacer tous les placements personnalisés ?',serviceUs:'Notre équipe',serviceThem:'Adversaire',contextServe:'Position de jeu · après notre service',contextReceive:'Position de jeu · après la réception',blockedReceive:'Réception indisponible : notre équipe sert',blockedServe:'Service indisponible : l’adversaire sert',setsTitle:'Score des sets',setLabel:'Set',firstService:'Premier service',selectFirstServe:'Début du set 1 — qui sert en premier ?',chooseDecidingServe:'Set 5 — nouveau tirage au sort : qui sert ?',ourFirstServe:'Nous servons',themFirstServe:'Nous recevons',firstServeHelp:'Choisis le premier service avant de compter le premier point.',autoFirstServe:'Premier service automatiquement attribué selon le set précédent.',decidingServeHelp:'Le set décisif nécessite un nouveau tirage au sort.',matchComplete:'Match terminé',setInProgress:'En cours',setAwaiting:'À jouer',setsTotal:'Sets gagnés',matchWon:'Match gagné !',matchLost:'Match perdu',startBlocked:'Choisis d’abord qui sert pour commencer le set.',nextSetInfo:'Le placement de départ est remis à R1. Choisis une autre rotation de départ si nécessaire.',phases:{home:'Départ',serve:'Service',receivePrimary:'Réception',base:'Position de jeu'},descriptions:{home:'Positions de départ dans l’ordre de rotation réglementaire.',serve:'Quand nous servons, les cinq joueurs de champ sont déjà en place ; le serveur reste derrière la ligne de fond.',receivePrimary:'Placement en réception avant le service adverse.',base:'Placement tactique pendant l’échange, après le service ou la réception.'},defaults:{S:'Passeur',RS:'Opposite',OH1:'Ailier 1',OH2:'Ailier 2',MB1:'Central 1',MB2:'Central 2'}},
+ en:{tagline:'5–1 rotations · FIVB rules 2025–2028',tactical:'TACTICAL BOARD',rotationLabel:'01 / ROTATION',phaseLabel:'02 / GAME PHASE',courtTitle:'Player positions',net:'NET',baseline:'END LINE ↓',live:'Live match',us:'Our team',them:'Opponents',won:'✓ Point won',lost:'✕ Point lost',undo:'↶ Undo last point',situation:'Match situation',tools:'Tools',newMatch:'New match',clearPhase:'Reset phase',clearAll:'Reset all',micro:'Start = rotation order; Playing position = tactical positions during the rally, after serve or reception. Changes last for this match; New match restores the locked reference positions.',footer:'FIVB Rules 2025–2028, Rule 7.4: serving team players may take any position (server remains behind the end line); receiving team must follow rotational order. Front/back row status and service order do not change.',customize:'Customize',customInfo:'Enter player names: they will appear below each role on court.',rotationWord:'Rotation',server:'Server',nextServer:'Next server',ourServe:'🏐 Our serve — free positioning',theirServe:'🏐 Receiving — rotation order required',serveHint:'At our serve, five players are in their tactical positions. The server stays behind the end line.',receiveHint:'On reception, players must respect their rotational order at the moment of the opponent’s serve.',dragHint:'↔ Drag a player to customize this position.',inPlay:'In play',confirmReset:'Reset all customized positions?',serviceUs:'Our team',serviceThem:'Opponents',contextServe:'Playing position · after our serve',contextReceive:'Playing position · after reception',blockedReceive:'Receive unavailable: our team is serving',blockedServe:'Serve unavailable: opponent is serving',setsTitle:'Set scores',setLabel:'Set',firstService:'First serve',selectFirstServe:'Set 1 — who serves first?',chooseDecidingServe:'Set 5 — new coin toss: who serves?',ourFirstServe:'Our serve',themFirstServe:'We receive',firstServeHelp:'Choose who serves first before counting the first point.',autoFirstServe:'First serve automatically assigned based on the previous set.',decidingServeHelp:'A new toss is required for the deciding set.',matchComplete:'Match over',setInProgress:'In progress',setAwaiting:'Not started',setsTotal:'Sets won',matchWon:'Match won!',matchLost:'Match lost',startBlocked:'Choose the first server before scoring.',nextSetInfo:'Starting rotation is reset to R1. You may select another starting rotation.',phases:{home:'Start',serve:'Serve',receivePrimary:'Receive',base:'Playing position'},descriptions:{home:'Initial positions in the required rotation order.',serve:'Our five court players take their tactical positions; the server remains behind the end line.',receivePrimary:'Serve-receive setup before the opponent’s serve.',base:'Tactical playing positions during the rally, after the serve or reception.'},defaults:{S:'Setter',RS:'Opposite',OH1:'Outside 1',OH2:'Outside 2',MB1:'Middle 1',MB2:'Middle 2'}}
+};
+let lang='fr';
+const phaseLabels=translations.fr.phases;
+
 const phaseDescriptions={
   home:'Positions de départ dans l’ordre de rotation réglementaire.',
   serve:'Nouvelle règle FIVB : quand nous servons, les cinq joueurs de champ se placent directement dans leur organisation tactique de base ; le bon serveur reste derrière la ligne de fond.',
@@ -121,44 +231,46 @@ const baseFormations={
   2:{
     home:{OH2:[0.14,0.16],RS:[0.47,0.16],MB1:[0.80,0.16],MB2:[0.14,0.73],S:[0.47,0.73],OH1:[0.82,0.73]},
     serve:{OH2:[0.16,0.16],MB1:[0.56,0.14],RS:[0.35,0.28],S:[0.88,0.46],MB2:[0.16,0.72],OH1:[0.86,1.05]},
-    receivePrimary:{RS:[0.47,0.14],MB1:[0.81,0.15],S:[0.71,0.27],OH2:[0.15,0.72],OH1:[0.79,0.68],MB2:[0.49,0.81]},
+    receivePrimary:{RS:[0.50,0.12],MB1:[0.91,0.36],S:[0.61,0.27],OH2:[0.18,0.65],OH1:[0.82,0.67],MB2:[0.50,0.80]},
     receiveAlternate:{OH2:[0.14,0.16],RS:[0.58,0.12],S:[0.32,0.26],MB2:[0.15,0.69],MB1:[0.81,0.68],OH1:[0.51,0.80]},
     base:{OH2:[0.15,0.16],MB1:[0.48,0.16],RS:[0.82,0.16],MB2:[0.15,0.63],S:[0.82,0.63],OH1:[0.50,0.79]}
   },
   3:{
-    home:{MB2:[0.14,0.16],OH2:[0.47,0.16],RS:[0.80,0.16],S:[0.14,0.73],MB1:[0.47,0.73],OH1:[0.82,0.73]},
+    home:{MB2:[0.14,0.16],OH2:[0.47,0.16],RS:[0.80,0.16],S:[0.14,0.73],OH1:[0.47,0.73],MB1:[0.82,0.73]},
     serve:{MB2:[0.24,0.12],RS:[0.77,0.12],OH2:[0.50,0.26],S:[0.35,0.54],OH1:[0.58,0.74],MB1:[0.50,1.05]},
-    receivePrimary:{MB2:[0.15,0.12],RS:[0.82,0.14],S:[0.12,0.50],OH2:[0.18,0.64],MB1:[0.76,0.63],OH1:[0.49,0.80]},
+    receivePrimary:{MB2:[0.14,0.16],RS:[0.87,0.30],S:[0.10,0.42],OH2:[0.20,0.64],MB1:[0.76,0.62],OH1:[0.48,0.77]},
     receiveAlternate:{MB2:[0.23,0.12],OH1:[0.78,0.12],S:[0.10,0.27],OH2:[0.18,0.68],RS:[0.77,0.61],MB1:[0.51,0.79]},
-    base:{OH2:[0.15,0.16],MB2:[0.47,0.16],RS:[0.82,0.16],MB1:[0.15,0.63],S:[0.82,0.63],OH1:[0.50,0.79]}
+    base:{OH2:[0.15,0.16],MB2:[0.47,0.16],RS:[0.82,0.16],MB1:[0.79,0.63],S:[0.15,0.63],OH1:[0.50,0.79]}
   },
   4:{
-    home:{RS:[0.14,0.16],MB2:[0.47,0.16],OH2:[0.80,0.16],OH1:[0.14,0.73],MB1:[0.47,0.73],S:[0.82,0.73]},
+    home:{S:[0.14,0.16],MB2:[0.47,0.16],OH2:[0.80,0.16],OH1:[0.14,0.73],MB1:[0.47,0.73],RS:[0.82,0.73]},
     serve:{S:[0.23,0.18],MB2:[0.48,0.12],OH2:[0.76,0.16],MB1:[0.48,0.63],OH1:[0.26,0.79],RS:[0.50,1.05]},
-    receivePrimary:{S:[0.14,0.14],MB2:[0.47,0.26],OH2:[0.15,0.64],OH1:[0.79,0.63],MB1:[0.47,0.80],RS:[0.82,0.80]},
+    receivePrimary:{S:[0.06,0.09],MB2:[0.15,0.27],OH2:[0.22,0.57],OH1:[0.50,0.64],MB1:[0.79,0.61],RS:[0.88,0.79]},
     receiveAlternate:{MB2:[0.48,0.12],S:[0.22,0.26],OH2:[0.76,0.18],OH1:[0.15,0.64],MB1:[0.49,0.80],RS:[0.82,0.63]},
     base:{OH2:[0.15,0.16],MB2:[0.48,0.16],S:[0.82,0.16],MB1:[0.15,0.63],OH1:[0.50,0.79],RS:[0.82,0.63]}
   },
   5:{
     home:{OH1:[0.14,0.16],S:[0.47,0.16],MB2:[0.80,0.16],MB1:[0.14,0.73],RS:[0.47,0.73],OH2:[0.82,0.73]},
     serve:{OH1:[0.16,0.16],MB2:[0.56,0.14],S:[0.31,0.26],MB1:[0.14,0.72],RS:[0.80,0.48],OH2:[0.50,1.05]},
-    receivePrimary:{S:[0.48,0.12],MB2:[0.81,0.20],OH2:[0.15,0.66],OH1:[0.80,0.64],MB1:[0.47,0.80],RS:[0.68,0.89]},
+    receivePrimary:{S:[0.56,0.14],MB2:[0.73,0.39],OH2:[0.76,0.68],OH1:[0.17,0.62],MB1:[0.47,0.76],RS:[0.66,0.84]},
     receiveAlternate:{OH1:[0.15,0.16],MB2:[0.48,0.16],S:[0.25,0.26],MB1:[0.14,0.64],OH2:[0.79,0.64],RS:[0.50,0.80]},
     base:{OH1:[0.15,0.16],MB2:[0.48,0.16],S:[0.82,0.16],MB1:[0.15,0.63],OH2:[0.50,0.79],RS:[0.82,0.63]}
   },
   6:{
     home:{MB1:[0.14,0.16],OH1:[0.47,0.16],S:[0.80,0.16],RS:[0.14,0.73],OH2:[0.47,0.73],MB2:[0.82,0.73]},
     serve:{MB1:[0.47,0.12],S:[0.72,0.12],OH1:[0.60,0.24],RS:[0.19,0.49],OH2:[0.49,0.80],MB2:[0.50,1.05]},
-    receivePrimary:{MB1:[0.15,0.12],S:[0.80,0.12],OH1:[0.18,0.67],MB2:[0.81,0.64],RS:[0.15,0.88],OH2:[0.50,0.80]},
+    receivePrimary:{MB1:[0.10,0.14],S:[0.80,0.13],OH1:[0.19,0.58],MB2:[0.79,0.67],RS:[0.15,0.86],OH2:[0.50,0.75]},
     receiveAlternate:{MB1:[0.15,0.12],OH1:[0.42,0.24],S:[0.76,0.12],RS:[0.15,0.64],MB2:[0.81,0.64],OH2:[0.50,0.80]},
     base:{OH2:[0.15,0.16],MB1:[0.48,0.16],S:[0.82,0.16],MB2:[0.15,0.63],OH1:[0.50,0.79],RS:[0.82,0.63]}
   }
 };
-const state={rotation:1,phase:'home',serve:'us',scoreUs:0,scoreThem:0,history:[],custom:{},names:{}};
+const state={rotation:1,phase:'home',serve:'us',scoreUs:0,scoreThem:0,history:[],custom:{},names:{},lang:'fr',customNames:{},setNumber:1,sets:[],firstServe:null,setFirstServe:null,awaitingFirstServe:true,matchOver:false};
+let upgradingToV16=true;
+try{upgradingToV16=!localStorage.getItem(STORAGE_KEY)}catch(e){}
 try{
-  const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||localStorage.getItem(PREVIOUS_STORAGE_KEY));
+  const saved=JSON.parse(localStorage.getItem(STORAGE_KEY)||localStorage.getItem(LEGACY_STORAGE_KEY)||localStorage.getItem(PREVIOUS_STORAGE_KEY));
   if(saved){
-    Object.assign(state,saved);state.history=[];
+    Object.assign(state,saved);state.history=Array.isArray(saved.history)?saved.history:[];
     // Apply the requested R1 correction even if previous custom coordinates exist.
     for(const phase of ['serve','base']){
       if(state.custom?.[1]?.[phase]){
@@ -168,15 +280,61 @@ try{
     }
   }
 }catch(e){}
+// Préserver les autres modifications locales, mais appliquer cette correction R3 une seule fois.
+try{
+ if(!localStorage.getItem(UPDATED_KEY)){
+   if(state.custom?.[3]?.serve) delete state.custom[3].serve.OH1;
+   localStorage.setItem(UPDATED_KEY,'1');
+ }
+}catch(e){}
+// V17: premier lancement du suivi multi-sets. On garde les noms et le schéma,
+// mais on repart d'un set 1 à 0-0 car les anciens points ne sont pas historisés par set.
+let previousV17=null,hadPreviousMatch=false;
+try{previousV17=JSON.parse(localStorage.getItem(STORAGE_KEY));hadPreviousMatch=!!localStorage.getItem(LEGACY_STORAGE_KEY);}catch(e){}
+if(!previousV17 && !hadPreviousMatch){
+  state.setNumber=1;state.sets=[];state.firstServe=null;state.setFirstServe=null;
+  state.awaitingFirstServe=true;state.matchOver=false;
+  state.scoreUs=0;state.scoreThem=0;state.rotation=1;state.phase='home';state.history=[];
+}
+if(!Array.isArray(state.sets))state.sets=[];
+if(!Array.isArray(state.history))state.history=[];
+// Use saved language if available; names remain user-controlled.
+lang=state.lang==='en'?'en':'fr';
+const oldDefaultNames={S:['Passeur','Setter'],RS:['Opposite','Pointu / Opposite'],OH1:['Allier 1','Ailier 1','Outside 1'],OH2:['Allier 2','Ailier 2','Outside 2'],MB1:['Central 1','Middle 1'],MB2:['Central 2','Middle 2']};
+state.customNames ||= {};
+for(const role of Object.keys(roles)){
+  if(!(role in state.customNames)) state.customNames[role]=!!(state.names?.[role] && !oldDefaultNames[role].includes(state.names[role]));
+}
+// Révisions demandées : importer les anciens noms et autres schémas, mais
+// ne pas laisser d'anciennes coordonnées personnalisées masquer ces captures.
+const updatedScreens={
+  2:['receivePrimary'],
+  3:['home','serve','receivePrimary'],
+  4:['home','serve','receivePrimary'],
+  5:['receivePrimary'],
+  6:['serve','receivePrimary']
+};
+if(upgradingToV16){
+  for(const [rot,phases] of Object.entries(updatedScreens)){
+    for(const p of phases){
+      if(state.custom?.[rot]?.[p]) delete state.custom[rot][p];
+    }
+  }
+}
+// V16 : figer les schémas approuvés comme référence immuable.
+// Les anciens déplacements manuels ne deviennent jamais un nouveau défaut.
+// Les noms personnalisés et la langue restent inchangés.
+// Les ajustements du match existant sont conservés lors de la mise à jour.
 if(state.phase==='receiveAlternate') state.phase='receivePrimary';
+// Migrer uniquement l'ancien libellé par défaut, sans écraser les noms personnalisés.
+if(state.names?.RS==='Pointu / Opposite') state.names.RS='Opposite';
 // Une phase de réception signifie que le service appartient à l'adversaire.
-if(state.phase==='receivePrimary') state.serve='them';
-if(state.phase==='serve') state.serve='us';
-for(const key of Object.keys(roles)){if(!state.names[key]) state.names[key]=roles[key].name;}
+// L’équipe au service vient du match, jamais du simple onglet affiché.
+for(const key of Object.keys(roles)){if(!state.customNames[key]) state.names[key]=translations[lang].defaults[key];}
 const court=document.getElementById('court');
 const $=id=>document.getElementById(id);
 function deepClone(obj){return JSON.parse(JSON.stringify(obj));}
-function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({...state,history:[]}));}catch(e){/* stockage indisponible */}}
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify({...state,history:state.history.slice(-80)}));}catch(e){/* stockage indisponible */}}
 function arrangeServeFormation(rotation){
   const formation=deepClone(baseFormations[rotation].base);
   const server=serverByRotation[rotation];
@@ -199,6 +357,26 @@ function arrangeServeFormation(rotation){
     formation.OH2=[0.18,0.72];
     formation.MB2=[0.5,0.72];
   }
+  // Placements au service validés à partir des captures de l'entraîneur.
+  // Les statuts réglementaires avant/arrière restent ceux de 'home'.
+  if(rotation===3){
+    Object.assign(formation,{
+      OH2:[0.15,0.16],MB2:[0.49,0.16],RS:[0.82,0.16],
+      OH1:[0.18,0.74],S:[0.82,0.73],MB1:[0.50,1.07]
+    });
+  }
+  if(rotation===4){
+    Object.assign(formation,{
+      OH2:[0.15,0.16],MB2:[0.49,0.16],S:[0.82,0.16],
+      OH1:[0.18,0.73],MB1:[0.50,0.73],RS:[0.50,1.07]
+    });
+  }
+  if(rotation===6){
+    Object.assign(formation,{
+      OH2:[0.18,0.16],MB1:[0.49,0.16],S:[0.82,0.16],
+      OH1:[0.26,0.66],RS:[0.73,0.66],MB2:[0.50,1.07]
+    });
+  }
   return formation;
 }
 function getFormation(rotation,phase){
@@ -215,33 +393,72 @@ function ensureCustom(rotation,phase){
 function defaultPhase(){return state.serve==='us' ? 'serve' : 'receivePrimary';}
 function clamp(v,min,max){return Math.min(max,Math.max(min,v));}
 function serverRole(){return serverByRotation[state.rotation];}
-function phaseLabel(){return phaseLabels[state.phase];}
-function addHistory(){state.history.push({rotation:state.rotation,phase:state.phase,serve:state.serve,scoreUs:state.scoreUs,scoreThem:state.scoreThem});if(state.history.length>100)state.history.shift();}
+function phaseLabel(){return translations[lang].phases[state.phase];}
+function matchWins(){
+  const won=state.sets.filter(x=>x.winner==='us').length;
+  const lost=state.sets.filter(x=>x.winner==='them').length;
+  return {won,lost};
+}
+function addHistory(){
+  state.history.push({rotation:state.rotation,phase:state.phase,serve:state.serve,scoreUs:state.scoreUs,scoreThem:state.scoreThem,setNumber:state.setNumber,sets:deepClone(state.sets),firstServe:state.firstServe,setFirstServe:state.setFirstServe,awaitingFirstServe:state.awaitingFirstServe,matchOver:state.matchOver});
+  if(state.history.length>80)state.history.shift();
+}
+function selectFirstServe(who){
+  if(state.matchOver||!state.awaitingFirstServe||!['us','them'].includes(who))return;
+  state.setFirstServe=who;state.serve=who;state.awaitingFirstServe=false;
+  if(state.setNumber===1)state.firstServe=who;
+  state.phase=defaultPhase();render();
+}
 function setPhase(phase){
+  if(phaseUnavailable(phase))return;
+  // Un changement de vue ne doit jamais changer qui sert.
+  // Seul le premier service du set et le résultat des échanges le déterminent.
   state.phase=phase;
-  // Le choix de la phase sert également à définir qui est au service.
-  // Sans cela, démarrer directement en R6 Réception pouvait laisser le service à nous.
-  if(phase==='receivePrimary') state.serve='them';
-  if(phase==='serve') state.serve='us';
   render();
 }
 function setRotation(rot){state.rotation=rot;render();}
+function checkSetEnd(){
+  const target=state.setNumber===5?15:25;
+  const diff=state.scoreUs-state.scoreThem;
+  if(Math.max(state.scoreUs,state.scoreThem)<target||Math.abs(diff)<2)return;
+  const winner=diff>0?'us':'them';
+  state.sets.push({number:state.setNumber,us:state.scoreUs,them:state.scoreThem,winner,firstServe:state.setFirstServe});
+  const wins=matchWins();
+  if(wins.won===3||wins.lost===3){state.matchOver=true;return;}
+  // Set suivant: une nouvelle feuille de rotation est possible.
+  state.setNumber+=1;state.rotation=1;state.scoreUs=0;state.scoreThem=0;
+  if(state.setNumber===5){
+    // Règle 12.1.1 : le set décisif recommence avec un tirage au sort.
+    state.setFirstServe=null;state.awaitingFirstServe=true;state.phase='home';
+  }else{
+    // Règle 12.1.2 : l'équipe qui N'A PAS commencé au service
+    // dans le set précédent sert en premier dans le set suivant.
+    const next=state.sets[state.sets.length-1].firstServe==='us'?'them':'us';
+    state.setFirstServe=next;state.serve=next;state.awaitingFirstServe=false;
+    state.phase=defaultPhase();
+  }
+}
 function changePoint(won){
+  if(state.matchOver||state.awaitingFirstServe)return;
   addHistory();
   if(won){
-    state.scoreUs += 1;
+    state.scoreUs+=1;
     if(state.serve==='them'){
-      state.rotation = state.rotation === 6 ? 1 : state.rotation + 1;
-      state.serve = 'us';
+      state.rotation=state.rotation===6?1:state.rotation+1;
+      state.serve='us';
     }
-  }else{
-    state.scoreThem += 1;
-    state.serve = 'them';
-  }
-  state.phase = defaultPhase();
+  }else{state.scoreThem+=1;state.serve='them';}
+  state.phase=defaultPhase();
+  checkSetEnd();render();
+}
+function resetMatch(){
+  state.rotation=1;state.phase='home';state.serve='us';
+  state.scoreUs=0;state.scoreThem=0;state.history=[];
+  state.custom={}; // Les schémas verrouillés reviennent, les noms restent.
+  state.setNumber=1;state.sets=[];state.firstServe=null;
+  state.setFirstServe=null;state.awaitingFirstServe=true;state.matchOver=false;
   render();
 }
-function resetMatch(){state.rotation=1;state.phase='home';state.serve='us';state.scoreUs=0;state.scoreThem=0;state.history=[];render();}
 function resetCurrentPhase(){
   if(state.custom?.[state.rotation]?.[state.phase]) delete state.custom[state.rotation][state.phase];
   render();
@@ -296,25 +513,46 @@ function renderPlayers(){
     el.querySelector('.name').textContent=state.names[role];
     const outside=coords[1] > 1;
     el.classList.toggle('outside',outside);
-    el.querySelector('.roleline').textContent=outside?'Serveur':'En jeu';
+    el.querySelector('.roleline').textContent=outside?translations[lang].server:translations[lang].inPlay;
     el.style.left=(coords[0]*100)+'%';
     el.style.top=(coords[1]*100)+'%';
   }
 }
 function renderLegend(){
-  $('legend').innerHTML=Object.entries(roles).map(([key,info])=>`<span class="chip"><span class="dot" style="--c:${info.color}"></span><strong>${info.abbr}</strong> ${state.names[key]}</span>`).join('');
+  $('legend').innerHTML=Object.entries(roles).map(([key,info])=>`<span class="chip"><span class="dot" style="--c:${info.color}"></span><strong>${info.abbr}</strong> ${escapeHtml(state.names[key])}</span>`).join('');
+}
+function phaseUnavailable(key){
+  if(state.awaitingFirstServe) return key==='serve'||key==='receivePrimary';
+  // Une seule situation de jeu réelle à la fois, y compris depuis Départ.
+  return (state.serve==='us' && key==='receivePrimary') ||
+         (state.serve==='them' && key==='serve');
 }
 function renderButtons(){
+  const t=translations[lang];
   $('rotationBtns').innerHTML=Array.from({length:6},(_,i)=>`<button type="button" data-r="${i+1}" class="${state.rotation===i+1?'active':''}">R${i+1}</button>`).join('');
-  $('phaseBtns').innerHTML=Object.entries(phaseLabels).map(([key,label])=>`<button type="button" data-phase="${key}" class="${state.phase===key?'active':''}">${label}</button>`).join('');
+  $('phaseBtns').innerHTML=Object.entries(t.phases).map(([key,label])=>{
+    const disabled=phaseUnavailable(key);
+    const why=disabled?(key==='serve'?t.blockedServe:t.blockedReceive):'';
+    return `<button type="button" data-phase="${key}" class="${state.phase===key?'active':''}${disabled?' is-unavailable':''}" ${disabled?'disabled aria-disabled="true"':''} ${disabled?`title="${escapeHtml(why)}"`:''}>${label}</button>`;
+  }).join('');
+  const indicator=$('phaseContext');
+  // Afficher l'état du service dans TOUTES les phases, pas seulement Position de jeu.
+  indicator.hidden=false;
+  indicator.dataset.mode=state.awaitingFirstServe?'choose':(state.serve==='us'?'serve':'receive');
+  indicator.textContent=state.awaitingFirstServe
+    ?(lang==='fr'?'Choisir le premier service du set':'Choose first serve for this set')
+    :(state.serve==='us'
+       ?(lang==='fr'?'🏐 Notre service':'🏐 Our serve')
+       :(lang==='fr'?'🏐 Réception · service adverse':'🏐 Receiving · opponent serves'));
+
 }
 function renderEditor(){
   const host=$('editor');
   if(host.dataset.ready==='1') return;
   host.dataset.ready='1';
-  host.innerHTML=Object.entries(roles).map(([key,info])=>`<div class="field"><label for="name_${key}">${info.abbr}</label><input id="name_${key}" value="${state.names[key].replace(/"/g,'&quot;')}"></div>`).join('');
+  host.innerHTML=Object.entries(roles).map(([key,info])=>`<div class="field"><label for="name_${key}">${info.abbr}</label><input id="name_${key}" value="${escapeHtml(state.names[key])}"></div>`).join('');
   Object.keys(roles).forEach(key=>{
-    host.querySelector('#name_'+key).addEventListener('input',e=>{state.names[key]=e.target.value.trim()||roles[key].name; render();});
+    host.querySelector('#name_'+key).addEventListener('input',e=>{state.customNames[key]=!!e.target.value.trim();state.names[key]=e.target.value.trim()||translations[lang].defaults[key]; render();});
   });
 }
 function syncEditorValues(){
@@ -324,36 +562,109 @@ function syncEditorValues(){
   });
 }
 function renderSummary(){
-  $('subtitle').textContent=`Rotation ${state.rotation} · ${phaseLabel()}`;
-  $('serverInfo').textContent=state.serve==='us' ? `Serveur : ${serverRole()}` : `Si récupération : ${serverByRotation[state.rotation===6?1:state.rotation+1]}`;
+  const t=translations[lang];
+  const next=serverByRotation[state.rotation===6?1:state.rotation+1];
+  $('subtitle').textContent=`${t.rotationWord} ${state.rotation} · ${phaseLabel()}`;
+  $('serverInfo').textContent=state.awaitingFirstServe
+    ?(lang==='fr'?'Service à choisir':'Choose serve')
+    :state.serve==='us'
+      ?`${t.server} : ${displayRole(serverRole())}`
+      :`${t.nextServer} : ${displayRole(next)}`;
   $('scoreUs').textContent=state.scoreUs;
   $('scoreThem').textContent=state.scoreThem;
-  $('status').textContent=`${state.serve==='us'?'🏐 Notre service — placement libre':'🏐 Réception — ordre de rotation obligatoire'} · R${state.rotation} · ${phaseLabel()}`;
-  $('sumRotation').textContent='R'+state.rotation;
-  $('sumPhase').textContent=phaseLabel();
-  $('sumServe').textContent=state.serve==='us'?'Notre équipe':'Adversaire';
-  $('sumServer').textContent=state.serve==='us' ? serverRole() : serverByRotation[state.rotation===6?1:state.rotation+1];
-  $('phaseExplain').innerHTML=`<strong>${phaseLabel()}</strong> — ${phaseDescriptions[state.phase]}`;
-  $('ruleHint').textContent=state.phase==='serve' ? 'Service libre : les 5 joueurs sont déjà en place. Le serveur désigné reste derrière la ligne de fond.' : state.serve==='them' ? 'Réception : l’ordre relatif des joueurs reste obligatoire au moment du service adverse.' : '↔ Fais glisser un joueur pour personnaliser ce placement.';
+  $('ruleHint').textContent=state.phase==='serve'?t.serveHint:state.serve==='them'?t.receiveHint:t.dragHint;
 }
+function renderSets(){
+  const t=translations[lang], wins=matchWins();
+  $('setsTitle').textContent=t.setsTitle;
+  $('setCol').textContent=t.setLabel;
+  $('usCol').textContent=t.us;
+  $('themCol').textContent=t.them;
+  $('startCol').textContent=t.firstService;
+  $('setsTotal').textContent=`${t.setsTotal} ${wins.won} – ${wins.lost}`;
+  const rows=[];
+  for(let n=1;n<=Math.min(5,Math.max(state.setNumber,state.sets.length));n++){
+    const complete=state.sets.find(x=>x.number===n);
+    const current=n===state.setNumber&&!state.matchOver;
+    let first=complete?.firstServe||(current?state.setFirstServe:null);
+    const firstLabel=first===null? '—' :first==='us'?t.us:t.them;
+    let colUs=complete?.us??(current?state.scoreUs:'—');
+    let colThem=complete?.them??(current?state.scoreThem:'—');
+    const name=complete?`${t.setLabel} ${n} ✓`:current?`${t.setLabel} ${n} •`:`${t.setLabel} ${n}`;
+    rows.push(`<tr class="${current?'is-current':''}"><td>${name}</td><td class="${complete?.winner==='us'?'setWinner':''}">${colUs}</td><td class="${complete?.winner==='them'?'setWinner':''}">${colThem}</td><td>${firstLabel}</td></tr>`);
+  }
+  $('setsBody').innerHTML=rows.join('');
+}
+function renderSetStart(){
+  const t=translations[lang];
+  const panel=$('startServeBox');
+  panel.hidden=state.matchOver;
+  $('startServeTitle').textContent=state.setNumber===5 && state.awaitingFirstServe
+    ? (lang==='fr'?'Set 5 · Tirage':'Set 5 · Toss')
+    : (state.awaitingFirstServe
+       ? `${t.setLabel} ${state.setNumber} ·`
+       : (lang==='fr'?'Service actuel ·':'Current serve ·'));
+  $('startWithServe').textContent=lang==='fr'?'Service':'Serve';
+  $('startWithReceive').textContent=lang==='fr'?'Récept':'Receive';
+  $('startWithServe').setAttribute('aria-pressed',String(!state.awaitingFirstServe&&state.serve==='us'));
+  $('startWithReceive').setAttribute('aria-pressed',String(!state.awaitingFirstServe&&state.serve==='them'));
+  $('startWithServe').disabled=!state.awaitingFirstServe;
+  $('startWithReceive').disabled=!state.awaitingFirstServe;
+  $('won').disabled=state.matchOver||state.awaitingFirstServe;
+  $('lost').disabled=state.matchOver||state.awaitingFirstServe;
+  $('undo').disabled=state.history.length===0;
+  $('won').style.opacity=$('won').disabled?'.45':'1';
+  $('lost').style.opacity=$('lost').disabled?'.45':'1';
+}
+function displayRole(role){return roles[role]?.abbr||role;}
+function escapeHtml(str){return String(str).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
+function translateStatic(){
+ const t=translations[lang];
+ const selectors={
+ '.brand p':'tagline','#tacticalBadge':'tactical','.sidebar .block:first-child .label':'rotationLabel','.sidebar .block:last-child .label':'phaseLabel',
+ '.courtTop h2':'courtTitle','.court .labelTop':'net','.court .labelBot':'baseline','.aside .block:nth-of-type(1) .label':'live',
+ '.scoreLabel:first-child':'us','#won':'won','#lost':'lost','#undo':'undo','#newMatch':'newMatch',
+ '#customTitle':'customize','.customizeCard .small':'customInfo'
+ };
+ for(const [selector,key] of Object.entries(selectors)){const el=document.querySelector(selector);if(el)el.textContent=t[key];}
+ document.querySelectorAll('.scoreLabel')[0].textContent=t.us;
+ document.querySelectorAll('.scoreLabel')[1].textContent=t.them;
+ const label=document.querySelector('.aside .block > .label');
+ if(label)label.textContent=t.live;
+ $('langFr').setAttribute('aria-pressed',String(lang==='fr'));
+ $('langEn').setAttribute('aria-pressed',String(lang==='en'));
+ document.documentElement.lang=lang;
+}
+function setLang(next){
+ if(next===lang)return;
+ lang=next;state.lang=lang;
+ for(const key of Object.keys(roles)){if(!state.customNames[key])state.names[key]=translations[lang].defaults[key];}
+ const editor=$('editor');editor.dataset.ready='';editor.innerHTML='';
+ render();
+}
+
 function render(){
+  translateStatic();
   renderButtons();
   renderPlayers();
   renderLegend();
   renderSummary();
+  renderSetStart();
+  renderSets();
   renderEditor();
   syncEditorValues();
   save();
 }
+$('langFr').onclick=()=>setLang('fr');
+$('langEn').onclick=()=>setLang('en');
 $('rotationBtns').addEventListener('click',e=>{const b=e.target.closest('[data-r]'); if(!b) return; setRotation(Number(b.dataset.r));});
-$('phaseBtns').addEventListener('click',e=>{const b=e.target.closest('[data-phase]'); if(!b) return; setPhase(b.dataset.phase);});
+$('phaseBtns').addEventListener('click',e=>{const b=e.target.closest('[data-phase]'); if(!b || b.disabled) return; setPhase(b.dataset.phase);});
+$('startWithServe').onclick=()=>selectFirstServe('us');
+$('startWithReceive').onclick=()=>selectFirstServe('them');
 $('won').onclick=()=>changePoint(true);
 $('lost').onclick=()=>changePoint(false);
 $('undo').onclick=()=>{const prev=state.history.pop(); if(!prev) return; Object.assign(state,prev); render();};
-$('resetPhase').onclick=()=>resetCurrentPhase();
-$('resetAll').onclick=()=>{if(confirm('Effacer tous les placements personnalisés ?')) resetPlacements();};
 $('newMatch').onclick=()=>resetMatch();
-if(window.matchMedia('(min-width:761px)').matches) $('playersDetails').open=true;
 render();
 })();
 </script></body></html>
